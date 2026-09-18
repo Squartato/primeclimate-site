@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>О компании — Prime Climate Engineering</title>
+<meta name="description" content="Prime Climate Engineering — инженерная компания в Новосибирске. Кондиционеры, электрика, отделка, светодиодные вывески.">
+<link rel="icon" type="image/png" href="logo.png">
+<meta name="theme-color" content="#0b2a4a">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,700&family=Inter:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
+<style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+        font-family: 'Inter', Arial, sans-serif;
+        background: #f5f1ea;
+        color: #1a1a1a;
+        line-height: 1.5;
+        overflow-x: hidden;
+        -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+
+    /* ============ ОБЩИЙ КОНТЕЙНЕР ============ */
+    .wrap { max-width: 1440px; margin: 0 auto; padding: 0 60px; }
+    @media (max-width: 900px) { .wrap { padding: 0 24px; } }
+
+    /* ============ ТОНКАЯ ШАПКА ============ */
+    .top {
+        position: fixed; top: 0; left: 0; right: 0;
+        z-index: 1000;
+        background: rgba(245, 241, 234, 0.92);
+        backdrop-filter: blur(12px);
+        border-bottom: 1px solid rgba(11, 42, 74, 0.1);
+    }
+    .top-inner {
+        max-width: 1440px; margin: 0 auto;
+        padding: 18px 60px;
+        display: flex; align-items: center; justify-content: space-between;
+        gap: 30px;
+    }
+    @media (max-width: 900px) { .top-inner { padding: 14px 24px; } }
+    .top-brand {
+        display: flex; align-items: center; gap: 14px;
+    }
+    .top-brand img { height: 34px; width: auto; }
+    .top-brand .name {
+        font-family: 'Playfair Display', serif;
+        font-size: 15px; font-weight: 700;
+        color: #0b2a4a;
+        letter-spacing: 2px;
+        line-height: 1.1;
+    }
+    .top-nav { display: flex; gap: 34px; align-items: center; }
+    .top-nav a {
+        font-size: 13px; font-weight: 500;
+        color: #0b2a4a; letter-spacing: 0.5px;
+        transition: color .2s;
+    }
+    .top-nav a:hover { color: #b8860b; }
+    .top-phone {
+        font-family: 'Playfair Display', serif;
+        font-size: 16px; font-weight: 700;
+        color: #0b2a4a; letter-spacing: 0.5px;
+    }
+    @media (max-width: 900px) {
+        .top-nav { display: none; }
+        .top-phone { font-size: 14px; }
+    }
+
+    /* ============ ТИТУЛЬНАЯ ============ */
+    .hero {
+        padding: 180px 0 120px;
+        position: relative;
+        overflow: hidden;
+    }
+    @media (max-width: 900px) { .hero { padding: 130px 0 70px; } }
+    .hero .eyebrow {
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 18px;
+        font-style: italic;
+        color: #b8860b;
+        letter-spacing: 2px;
+        margin-bottom: 40px;
+        display: flex; align-items: center; gap: 24px;
+    }
+    .hero .eyebrow::before {
+        content: ''; width: 60px; height: 1px; background: #b8860b;
+    }
+    .hero h1 {
+        font-family: 'Playfair Display', serif;
+        font-size: clamp(56px, 10vw, 160px);
+        font-weight: 400;
+        line-height: 0.92;
+        letter-spacing: -0.03em;
+        color: #0b2a4a;
+        margin-bottom: 60px;
+    }
+    .hero h1 em {
+        font-style: italic;
+        font-weight: 400;
+        color: #b8860b;
+        display: block;
+        padding-left: 0.5em;
+    }
+    .hero-meta {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 60px;
+        padding-top: 50px;
+        border-top: 1px solid rgba(11, 42, 74, 0.15);
+    }
+    @media (max-width: 900px) { .hero-meta { grid-template-columns: 1fr; gap: 30px; } }
+    .hero-meta .lbl {
+        font-size: 11px;
+        color: #8a7a5a;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        margin-bottom: 14px;
+    }
+    .hero-meta .val {
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 20px;
+        color: #0b2a4a;
+        line-height: 1.5;
+        font-style: italic;
+    }
+
+    /* ============ БОЛЬШИЕ ЦИФРЫ ============ */
+    .numbers {
+        padding: 100px 0;
+        background: #0b2a4a;
+        color: #f5f1ea;
+    }
+    .numbers-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 0;
+    }
+    @media (max-width: 900px) { .numbers-grid { grid-template-columns: 1fr 1fr; } }
+    .num-item {
+        padding: 30px 40px;
+        border-right: 1px solid rgba(255, 255, 255, 0.08);
+        text-align: center;
+    }
+    .num-item:last-child { border-right: none; }
+    .num-item .val {
+        font-family: 'Playfair Display', serif;
+        font-size: clamp(56px, 8vw, 110px);
+        font-weight: 400;
+        font-style: italic;
+        color: #b8860b;
+        line-height: 1;
+        letter-spacing: -0.04em;
+        margin-bottom: 18px;
+    }
+    .num-item .lbl {
+        font-size: 12px;
+        color: rgba(255, 255, 255, 0.55);
+        letter-spacing: 2.5px;
+        text-transform: uppercase;
+    }
+
+    /* ============ РАЗДЕЛИТЕЛЬ ============ */
+    .divider {
+        display: flex; align-items: center; gap: 30px;
+        padding: 90px 0 70px;
+    }
+    .divider .num {
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 15px;
+        font-style: italic;
+        color: #b8860b;
+        letter-spacing: 2px;
+    }
+    .divider .line {
+        flex: 1; height: 1px; background: rgba(11, 42, 74, 0.15);
+    }
+    .divider .title {
+        font-family: 'Playfair Display', serif;
+        font-size: 15px;
+        font-weight: 600;
+        color: #0b2a4a;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+    }
+
+    /* ============ О КОМПАНИИ ============ */
+    .about-editorial {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 100px;
+        align-items: start;
+        padding-bottom: 100px;
+    }
+    @media (max-width: 900px) {
+        .about-editorial { grid-template-columns: 1fr; gap: 40px; padding-bottom: 60px; }
+    }
+    .about-editorial .lead {
+        font-family: 'Playfair Display', serif;
+        font-size: clamp(26px, 3vw, 40px);
+        font-weight: 400;
+        line-height: 1.2;
+        color: #0b2a4a;
+        letter-spacing: -0.02em;
+    }
+    .about-editorial .lead em {
+        font-style: italic;
+        color: #b8860b;
+    }
+    .about-editorial .body p {
+        font-size: 15px;
+        line-height: 1.85;
+        color: #4a4a4a;
+        margin-bottom: 20px;
+    }
+    .about-editorial .body p:first-child::first-letter {
+        font-family: 'Playfair Display', serif;
+        font-size: 68px;
+        font-weight: 400;
+        color: #b8860b;
+        float: left;
+        line-height: 0.85;
+        margin: 6px 14px 0 0;
+    }
+    .about-editorial .body strong { color: #0b2a4a; font-weight: 600; }
+
+    /* ============ КОМАНДА ============ */
+    .team-editorial {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 60px;
+        padding-bottom: 120px;
+    }
+    @media (max-width: 900px) { .team-editorial { grid-template-columns: 1fr; gap: 50px; } }
+    .person {
+        position: relative;
+    }
+    .person-photo {
+        aspect-ratio: 4/5;
+        overflow: hidden;
+        background: #0b2a4a;
+        margin-bottom: 30px;
+        position: relative;
+    }
+    .person-photo img {
+        width: 100%; height: 100%;
+        object-fit: cover;
+        object-position: center top;
+        filter: grayscale(15%);
+        transition: transform 1s ease, filter 0.5s ease;
+    }
+    .person:hover .person-photo img {
+        transform: scale(1.04);
+        filter: grayscale(0);
+    }
+    .person-num {
+        position: absolute;
+        top: 25px; right: 25px;
+        font-family: 'Playfair Display', serif;
+        font-size: 15px;
+        font-style: italic;
+        color: rgba(255, 255, 255, 0.7);
+        letter-spacing: 2px;
+        z-index: 2;
+    }
+    .person h3 {
+        font-family: 'Playfair Display', serif;
+        font-size: 26px;
+        font-weight: 400;
+        color: #0b2a4a;
+        line-height: 1.15;
+        margin-bottom: 10px;
+        letter-spacing: -0.01em;
+    }
+    .person .role {
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 16px;
+        font-style: italic;
+        color: #b8860b;
+        letter-spacing: 1.5px;
+        margin-bottom: 20px;
+    }
+    .person .desc {
+        font-size: 14px;
+        line-height: 1.75;
+        color: #4a4a4a;
+    }
+
+    /* ============ УСЛУГИ ============ */
+    .services-list { padding-bottom: 120px; }
+    .service-row {
+        display: grid;
+        grid-template-columns: 100px 1fr 220px;
+        gap: 50px;
+        align-items: center;
+        padding: 50px 0;
+        border-top: 1px solid rgba(11, 42, 74, 0.12);
+        transition: all .3s;
+        cursor: pointer;
+    }
+    .service-row:last-child { border-bottom: 1px solid rgba(11, 42, 74, 0.12); }
+    .service-row:hover {
+        background: rgba(184, 134, 11, 0.03);
+        padding-left: 20px;
+    }
+    @media (max-width: 900px) {
+        .service-row { grid-template-columns: 1fr; gap: 14px; padding: 35px 0; }
+        .service-row:hover { padding-left: 0; }
+    }
+    .service-row .s-num {
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 22px;
+        font-style: italic;
+        color: #b8860b;
+        letter-spacing: 2px;
+    }
+    .service-row .s-title {
+        font-family: 'Playfair Display', serif;
+        font-size: clamp(24px, 3vw, 38px);
+        font-weight: 400;
+        color: #0b2a4a;
+        line-height: 1.15;
+        letter-spacing: -0.02em;
+        margin-bottom: 10px;
+    }
+    .service-row .s-desc {
+        font-size: 14px;
+        color: #6a6a6a;
+        line-height: 1.7;
+        max-width: 620px;
+    }
+    .service-row .s-price {
+        font-family: 'Playfair Display', serif;
+        font-size: 24px;
+        font-style: italic;
+        font-weight: 600;
+        color: #b8860b;
+        text-align: right;
+        letter-spacing: -0.01em;
+    }
+    @media (max-width: 900px) {
+        .service-row .s-price { text-align: left; }
+    }
+
+    /* ============ ГАРАНТИЯ ============ */
+    .warranty {
+        background: #0b2a4a;
+        color: #f5f1ea;
+        padding: 140px 0;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+    }
+    .warranty::before {
+        content: '2';
+        position: absolute;
+        top: 50%; left: 50%;
+        transform: translate(-50%, -50%);
+        font-family: 'Playfair Display', serif;
+        font-size: 700px;
+        font-weight: 900;
+        font-style: italic;
+        color: rgba(184, 134, 11, 0.06);
+        line-height: 1;
+        pointer-events: none;
+    }
+    .warranty-inner { position: relative; z-index: 2; }
+    .warranty .eyebrow {
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 17px;
+        font-style: italic;
+        color: #b8860b;
+        letter-spacing: 3px;
+        margin-bottom: 50px;
+    }
+    .warranty h2 {
+        font-family: 'Playfair Display', serif;
+        font-size: clamp(60px, 12vw, 180px);
+        font-weight: 400;
+        line-height: 0.9;
+        letter-spacing: -0.04em;
+        color: #fff;
+        margin-bottom: 40px;
+    }
+    .warranty h2 em {
+        font-style: italic;
+        color: #b8860b;
+    }
+    .warranty p {
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 22px;
+        font-style: italic;
+        color: rgba(255, 255, 255, 0.7);
+        max-width: 620px;
+        margin: 0 auto;
+        line-height: 1.6;
+        letter-spacing: 0.5px;
+    }
+
+    /* ============ КОНТАКТЫ ============ */
+    .contacts-big {
+        padding: 140px 0 100px;
+    }
+    .contacts-big .eyebrow {
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 18px;
+        font-style: italic;
+        color: #b8860b;
+        letter-spacing: 2px;
+        margin-bottom: 40px;
+        display: flex; align-items: center; gap: 24px;
+    }
+    .contacts-big .eyebrow::before {
+        content: ''; width: 60px; height: 1px; background: #b8860b;
+    }
+    .contacts-big h2 {
+        font-family: 'Playfair Display', serif;
+        font-size: clamp(40px, 7vw, 96px);
+        font-weight: 400;
+        line-height: 1;
+        color: #0b2a4a;
+        letter-spacing: -0.03em;
+        margin-bottom: 80px;
+    }
+    .contacts-big h2 em {
+        font-style: italic;
+        color: #b8860b;
+    }
+    .contacts-list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0 80px;
+    }
+    @media (max-width: 900px) { .contacts-list { grid-template-columns: 1fr; } }
+    .contact-row {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        gap: 30px;
+        padding: 28px 0;
+        border-bottom: 1px solid rgba(11, 42, 74, 0.12);
+    }
+    .contact-row .lbl {
+        font-size: 11px;
+        color: #8a7a5a;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        flex-shrink: 0;
+    }
+    .contact-row .val {
+        font-family: 'Playfair Display', serif;
+        font-size: clamp(18px, 2.2vw, 26px);
+        font-weight: 400;
+        color: #0b2a4a;
+        text-align: right;
+        letter-spacing: -0.01em;
+        line-height: 1.3;
+    }
+    .contact-row .val.gold { color: #b8860b; font-style: italic; }
+
+    /* ============ ПОДПИСЬ ============ */
+    .signature {
+        padding: 60px 0 100px;
+        text-align: center;
+    }
+    .signature .quote {
+        font-family: 'Playfair Display', serif;
+        font-size: clamp(28px, 4vw, 56px);
+        font-style: italic;
+        color: #0b2a4a;
+        line-height: 1.15;
+        letter-spacing: -0.02em;
+        margin-bottom: 30px;
+    }
+    .signature .quote::before,
+    .signature .quote::after {
+        content: '«';
+        color: #b8860b;
+    }
+    .signature .quote::after { content: '»'; }
+    .signature .sign-line {
+        font-size: 12px;
+        color: #8a7a5a;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+    }
+
+    /* ============ ФУТЕР ============ */
+    .foot {
+        background: #0b2a4a;
+        color: rgba(255, 255, 255, 0.5);
+        padding: 50px 0 30px;
+        font-size: 12px;
+        letter-spacing: 0.5px;
+    }
+    .foot-inner {
+        display: flex; justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap; gap: 20px;
+    }
+    .foot-brand {
+        font-family: 'Playfair Display', serif;
+        font-size: 14px;
+        color: #fff;
+        letter-spacing: 2px;
+    }
+    .foot a { color: rgba(255, 255, 255, 0.5); }
+    .foot a:hover { color: #b8860b; }
+
+    /* ============ ПЛАВАЮЩАЯ КНОПКА ============ */
+    .float-call {
+        position: fixed; bottom: 30px; right: 30px;
+        width: 60px; height: 60px;
+        background: #b8860b; color: #fff;
+        border-radius: 50%;
+        display: flex; align-items: center; justify-content: center;
+        font-size: 24px;
+        z-index: 999;
+        box-shadow: 0 10px 40px rgba(184, 134, 11, 0.4);
+        transition: transform .3s;
+    }
+    .float-call:hover { transform: scale(1.08); color: #fff; }
+</style>
+</head>
+<body>
+
+<!-- ШАПКА -->
+<div class="top">
+    <div class="top-inner">
+        <a href="index.html" class="top-brand">
+            <img src="logo.png" alt="PCE">
+            <div class="name">PRIME CLIMATE<br>ENGINEERING</div>
+        </a>
+        <nav class="top-nav">
+            <a href="index.html">Главная</a>
+            <a href="#about">О компании</a>
+            <a href="#team">Команда</a>
+            <a href="#services">Услуги</a>
+            <a href="#contacts">Контакты</a>
+        </nav>
+        <a href="tel:+79939527720" class="top-phone">8-993-952-77-20</a>
+    </div>
+</div>
+
+<!-- ТИТУЛ -->
+<section class="hero">
+    <div class="wrap">
+        <div class="eyebrow">Инженерная компания · Новосибирск</div>
+        <h1>
+            Инженерные<br>
+            решения<br>
+            <em>для жизни.</em>
+        </h1>
+        <div class="hero-meta">
+            <div>
+                <div class="lbl">О компании</div>
+                <div class="val">ООО «ПРАЙМ КЛИМАТ ИНЖИНИРИНГ» — официальная компания. Договор, чек, гарантия 2 года на все работы.</div>
+            </div>
+            <div>
+                <div class="lbl">Что делаем</div>
+                <div class="val">Кондиционеры, электромонтаж, внутренняя отделка, светодиодные вывески. Один подрядчик на всё.</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ЦИФРЫ -->
+<section class="numbers">
+    <div class="wrap">
+        <div class="numbers-grid">
+            <div class="num-item">
+                <div class="val">2</div>
+                <div class="lbl">Года гарантии</div>
+            </div>
+            <div class="num-item">
+                <div class="val">5+</div>
+                <div class="lbl">Лет опыта</div>
+            </div>
+            <div class="num-item">
+                <div class="val">4</div>
+                <div class="lbl">Направления</div>
+            </div>
+            <div class="num-item">
+                <div class="val">24/7</div>
+                <div class="lbl">Приём заявок</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- О КОМПАНИИ -->
+<section id="about">
+    <div class="wrap">
+        <div class="divider">
+            <span class="num">01</span>
+            <span class="line"></span>
+            <span class="title">О компании</span>
+        </div>
+        <div class="about-editorial">
+            <div class="lead">
+                Мы — молодая инженерная компания <em>с сильным опытом</em> за плечами.
+            </div>
+            <div class="body">
+                <p>Prime Climate Engineering — это команда мастеров, которые <strong>более 5 лет работают</strong> на объектах Новосибирска и области. Мы официально зарегистрированы как ООО и работаем по договору с полным пакетом документов.</p>
+                <p>Мы не посредники и не агенты. <strong>Каждый объект ведём лично</strong> — от первого звонка до сдачи. Сами выезжаем на замер, сами считаем, сами выполняем.</p>
+                <p>Наша цель — чтобы клиент получил результат, за который не стыдно, и вернулся к нам снова. Мы отвечаем за сроки, качество и цену. Никаких скрытых доплат — только то, что прописано в смете.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- КОМАНДА -->
+<section id="team" style="background: #efe9dd;">
+    <div class="wrap">
+        <div class="divider">
+            <span class="num">02</span>
+            <span class="line"></span>
+            <span class="title">Руководство</span>
+        </div>
+        <div class="team-editorial">
+            <div class="person">
+                <div class="person-photo">
+                    <span class="person-num">I</span>
+                    <img src="gurimenko.png" alt="Гурименко Д.А.">
+                </div>
+                <h3>Гурименко<br>Дмитрий Андреевич</h3>
+                <div class="role">Генеральный директор</div>
+                <p class="desc">Отвечает за развитие компании, работу с организациями и партнёрами, тендеры и стратегию. Принимает ключевые решения по каждому объекту.</p>
+            </div>
+            <div class="person">
+                <div class="person-photo">
+                    <span class="person-num">II</span>
+                    <img src="mochalov.png" alt="Мочалов Е.С.">
+                </div>
+                <h3>Мочалов<br>Евгений Сергеевич</h3>
+                <div class="role">Исполнительный директор</div>
+                <p class="desc">Контролирует выполнение работ, руководит бригадами, ведёт объекты от замера до сдачи. Всегда на связи по рабочим вопросам.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- УСЛУГИ -->
+<section id="services">
+    <div class="wrap">
+        <div class="divider">
+            <span class="num">03</span>
+            <span class="line"></span>
+            <span class="title">Направления</span>
+        </div>
+        <div class="services-list">
+            <div class="service-row">
+                <div class="s-num">I</div>
+                <div>
+                    <div class="s-title">Кондиционеры</div>
+                    <div class="s-desc">Монтаж сплит-систем, сервисное обслуживание, чистка, заправка фреоном, демонтаж и переустановка оборудования.</div>
+                </div>
+                <div class="s-price">от 14 000 ₽</div>
+            </div>
+            <div class="service-row">
+                <div class="s-num">II</div>
+                <div>
+                    <div class="s-title">Электромонтаж</div>
+                    <div class="s-desc">Замена проводки, сборка электрощитов, розетки, освещение, датчики движения, подключение технологического оборудования.</div>
+                </div>
+                <div class="s-price">от 1 000 ₽/м²</div>
+            </div>
+            <div class="service-row">
+                <div class="s-num">III</div>
+                <div>
+                    <div class="s-title">Внутренняя отделка</div>
+                    <div class="s-desc">Штукатурка, гипсокартон, стяжка, обои, покраска, плитка. Комплексно с электрикой и климатом.</div>
+                </div>
+                <div class="s-price">от 1 000 ₽/м²</div>
+            </div>
+            <div class="service-row">
+                <div class="s-num">IV</div>
+                <div>
+                    <div class="s-title">Светодиодные вывески</div>
+                    <div class="s-desc">Изготовление и монтаж LED-вывесок, лайтбоксов, объёмных букв, архитектурной подсветки витрин.</div>
+                </div>
+                <div class="s-price">от 5 000 ₽</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ГАРАНТИЯ -->
+<section class="warranty">
+    <div class="wrap warranty-inner">
+        <div class="eyebrow">Мы отвечаем за результат</div>
+        <h2>Гарантия <em>2 года</em></h2>
+        <p>Официальный договор, акт приёмки, гарантийный сертификат. Бесплатный выезд специалиста при гарантийном случае.</p>
+    </div>
+</section>
+
+<!-- КОНТАКТЫ -->
+<section id="contacts" class="contacts-big">
+    <div class="wrap">
+        <div class="eyebrow">Свяжитесь с нами</div>
+        <h2>Готовы <em>обсудить</em> сотрудничество</h2>
+
+        <div class="contacts-list">
+            <div class="contact-row">
+                <span class="lbl">Телефон</span>
+                <span class="val gold">8-993-952-77-20</span>
+            </div>
+            <div class="contact-row">
+                <span class="lbl">Телефон</span>
+                <span class="val gold">8-993-953-77-70</span>
+            </div>
+            <div class="contact-row">
+                <span class="lbl">Почта</span>
+                <span class="val">info@primeclimate-nsk.ru</span>
+            </div>
+            <div class="contact-row">
+                <span class="lbl">Сайт</span>
+                <span class="val">primeclimate-nsk.ru</span>
+            </div>
+            <div class="contact-row">
+                <span class="lbl">Регион</span>
+                <span class="val">Новосибирск и область</span>
+            </div>
+            <div class="contact-row">
+                <span class="lbl">Режим</span>
+                <span class="val">Ежедневно 8:00 – 20:00</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ПОДПИСЬ -->
+<section class="signature">
+    <div class="wrap">
+        <div class="quote">Инженерные решения для жизни</div>
+        <div class="sign-line">ООО «ПРАЙМ КЛИМАТ ИНЖИНИРИНГ» · ИНН 5406856000 · ОГРН 1265400021875</div>
+    </div>
+</section>
+
+<!-- ФУТЕР -->
+<footer class="foot">
+    <div class="wrap foot-inner">
+        <div class="foot-brand">PRIME CLIMATE ENGINEERING</div>
+        <div>
+            <a href="index.html">Главная</a> · <a href="tel:+79939527720">8-993-952-77-20</a> · <a href="mailto:info@primeclimate-nsk.ru">info@primeclimate-nsk.ru</a>
+        </div>
+        <div>© 2026 Все права защищены</div>
+    </div>
+</footer>
+
+<a href="tel:+79939527720" class="float-call" title="Позвонить">📞</a>
+
+</body>
+</html>
