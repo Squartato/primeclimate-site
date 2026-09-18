@@ -3,715 +3,244 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prime Climate Engineering — монтаж кондиционеров и электромонтаж в Новосибирске</title>
-    <meta name="description" content="ООО «ПРАЙМ КЛИМАТ ИНЖИНИРИНГ» — монтаж кондиционеров, электромонтаж, отделка. Официальный договор, гарантия 5 лет, рассрочка от Т-Банка. Выезд в день звонка по Новосибирску.">
-    <meta name="keywords" content="монтаж кондиционеров Новосибирск, установка сплит-систем, электромонтаж, отделка, алмазное бурение, Prime Climate Engineering">
+    <title>Prime Climate Engineering — кондиционеры, электрика, отделка в Новосибирске</title>
+    <meta name="description" content="Монтаж кондиционеров, электромонтаж, отделка, светодиодные вывески в Новосибирске. Официальное ООО, договор, гарантия 2 года. Выезд в день звонка, бесплатный замер.">
     <link rel="icon" type="image/png" href="logo.png">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#0b2a4a">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="PCE">
     <style>
-        /* ==================== ОБЩИЕ ==================== */
         * { margin: 0; padding: 0; box-sizing: border-box; }
         html { scroll-behavior: smooth; }
-        body {
-            font-family: 'Georgia', 'Times New Roman', serif;
-            background: #f4f8fe;
-            color: #0b2a4a;
-            line-height: 1.6;
-            font-size: 16px;
-        }
-        a { color: #0b2a4a; text-decoration: none; transition: color 0.2s; }
+        body { font-family: 'Georgia', serif; background: #fff; color: #0b2a4a; line-height: 1.6; overflow-x: hidden; }
+        a { color: #0b2a4a; text-decoration: none; transition: color .2s; }
         a:hover { color: #b8860b; }
         img { max-width: 100%; display: block; }
         .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
 
-        /* ==================== ШАПКА ==================== */
-        .top-bar {
-            background: #0b2a4a;
-            color: #fff;
-            padding: 8px 0;
-            font-family: 'Arial', sans-serif;
-            font-size: 12px;
-            letter-spacing: 0.5px;
-        }
-        .top-bar .container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-        .top-bar .top-contacts { display: flex; gap: 20px; flex-wrap: wrap; }
-        .top-bar .top-contacts span { display: inline-flex; align-items: center; gap: 5px; }
+        .btn { display: inline-flex; align-items: center; gap: 8px; font-family: Arial, sans-serif; font-size: 14px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; padding: 15px 28px; border-radius: 6px; cursor: pointer; transition: all .3s; border: none; text-decoration: none; }
+        .btn-gold { background: #ffd700; color: #0b2a4a; }
+        .btn-gold:hover { background: #e6c200; color: #0b2a4a; transform: translateY(-2px); box-shadow: 0 10px 25px rgba(255,215,0,.4); }
+        .btn-navy { background: #0b2a4a; color: #fff; }
+        .btn-navy:hover { background: #b8860b; color: #fff; transform: translateY(-2px); }
+        .btn-outline { background: transparent; color: #0b2a4a; border: 2px solid #0b2a4a; }
+        .btn-outline:hover { background: #0b2a4a; color: #fff; }
+
+        .top-bar { background: #0b2a4a; color: #fff; padding: 10px 0; font-family: Arial, sans-serif; font-size: 13px; }
+        .top-bar .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
+        .top-bar .contacts { display: flex; gap: 20px; flex-wrap: wrap; }
         .top-bar a { color: #fff; }
         .top-bar a:hover { color: #ffd700; }
 
-        header.main-header {
-            background: #ffffff;
-            border-bottom: 3px solid #0b2a4a;
-            padding: 15px 0;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            box-shadow: 0 2px 10px rgba(11, 42, 74, 0.08);
-        }
-        .main-header .container {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            gap: 20px;
-        }
-        .logo-block {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-        .logo-block img {
-            height: 60px;
-            width: auto;
-            object-fit: contain;
-        }
-        .logo-block .brand-text {
-            font-family: 'Arial', sans-serif;
-        }
-        .logo-block .brand-name {
-            font-size: 20px;
-            font-weight: 700;
-            color: #0b2a4a;
-            letter-spacing: 1px;
-            line-height: 1.1;
-        }
-        .logo-block .brand-slogan {
-            font-size: 11px;
-            color: #b8860b;
-            font-style: italic;
-            letter-spacing: 0.5px;
-            margin-top: 3px;
-        }
-        .header-contacts {
-            display: flex;
-            flex-direction: column;
-            text-align: right;
-            font-family: 'Arial', sans-serif;
-        }
-        .header-contacts .phone-main {
-            font-size: 18px;
-            font-weight: 700;
-            color: #0b2a4a;
-            letter-spacing: 0.5px;
-        }
-        .header-contacts .phone-second {
-            font-size: 14px;
-            color: #2c4a6a;
-            margin-top: 2px;
-        }
-        .header-contacts .work-time {
-            font-size: 11px;
-            color: #4a6a8a;
-            margin-top: 4px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
+        header.main-header { background: #fff; border-bottom: 3px solid #0b2a4a; padding: 15px 0; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 10px rgba(11,42,74,.08); }
+        .main-header .container { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 20px; }
+        .logo-block { display: flex; align-items: center; gap: 15px; }
+        .logo-block img { height: 55px; }
+        .brand-name { font-family: Arial, sans-serif; font-size: 19px; font-weight: 700; color: #0b2a4a; letter-spacing: 1px; line-height: 1.1; }
+        .brand-slogan { font-size: 11px; color: #b8860b; font-style: italic; letter-spacing: .5px; margin-top: 2px; }
+        .header-contacts { text-align: right; font-family: Arial, sans-serif; }
+        .phone-main { font-size: 19px; font-weight: 700; color: #0b2a4a; }
+        .phone-second { font-size: 14px; color: #2c4a6a; margin-top: 2px; }
+        .work-time { font-size: 11px; color: #4a6a8a; margin-top: 4px; text-transform: uppercase; letter-spacing: 1px; }
 
-        /* ==================== НАВИГАЦИЯ ==================== */
-        nav.main-nav {
-            background: #0b2a4a;
-            padding: 0;
-        }
-        nav.main-nav ul {
-            display: flex;
-            list-style: none;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-        nav.main-nav li a {
-            display: block;
-            color: #fff;
-            padding: 14px 22px;
-            font-family: 'Arial', sans-serif;
-            font-size: 13px;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            font-weight: 600;
-            transition: background 0.2s, color 0.2s;
-        }
-        nav.main-nav li a:hover {
-            background: #b8860b;
-            color: #fff;
-        }
+        nav.main-nav { background: #0b2a4a; }
+        nav.main-nav ul { display: flex; list-style: none; justify-content: center; flex-wrap: wrap; }
+        nav.main-nav li a { display: block; color: #fff; padding: 14px 22px; font-family: Arial, sans-serif; font-size: 13px; text-transform: uppercase; letter-spacing: 1.5px; font-weight: 600; transition: background .2s; }
+        nav.main-nav li a:hover { background: #b8860b; color: #fff; }
 
-        /* ==================== БАННЕР ==================== */
-        .hero {
-            background: linear-gradient(135deg, #0b2a4a 0%, #1a3c5e 60%, #2c4a6a 100%);
-            color: #fff;
-            padding: 80px 0 70px;
-            position: relative;
-            overflow: hidden;
-        }
-        .hero::before {
-            content: 'PCE';
-            position: absolute;
-            right: -50px;
-            bottom: -80px;
-            font-family: 'Arial', sans-serif;
-            font-size: 320px;
-            font-weight: 900;
-            color: #fff;
-            opacity: 0.04;
-            line-height: 1;
-            pointer-events: none;
-            letter-spacing: -10px;
-        }
-        .hero .container {
-            position: relative;
-            z-index: 2;
-            display: flex;
-            align-items: center;
-            gap: 50px;
-            flex-wrap: wrap;
-        }
-        .hero-text { flex: 1 1 55%; min-width: 300px; }
-        .hero-text .hero-eyebrow {
-            font-family: 'Arial', sans-serif;
-            font-size: 12px;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            color: #ffd700;
-            margin-bottom: 20px;
-        }
-        .hero-text h1 {
-            font-family: 'Georgia', serif;
-            font-size: 42px;
-            line-height: 1.15;
-            font-weight: 700;
-            margin-bottom: 20px;
-            letter-spacing: -0.5px;
-        }
-        .hero-text h1 .accent { color: #ffd700; }
-        .hero-text .hero-subtitle {
-            font-size: 17px;
-            line-height: 1.7;
-            color: #e8eff9;
-            margin-bottom: 30px;
-            max-width: 620px;
-        }
-        .hero-cta {
-            display: flex;
-            gap: 15px;
-            flex-wrap: wrap;
-        }
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            font-family: 'Arial', sans-serif;
-            font-size: 14px;
-            font-weight: 700;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            padding: 15px 28px;
-            border-radius: 4px;
-            cursor: pointer;
-            transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
-            border: none;
-            text-decoration: none;
-        }
-        .btn:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(0,0,0,0.2); }
-        .btn-gold {
-            background: #ffd700;
-            color: #0b2a4a;
-        }
-        .btn-gold:hover { background: #e6c200; color: #0b2a4a; }
-        .btn-outline {
-            background: transparent;
-            color: #fff;
-            border: 2px solid #fff;
-        }
-        .btn-outline:hover { background: #fff; color: #0b2a4a; }
+        .hero { background: linear-gradient(135deg, #0b2a4a 0%, #1a3c5e 60%, #2c4a6a 100%); color: #fff; padding: 70px 0; position: relative; overflow: hidden; }
+        .hero::before { content: 'PCE'; position: absolute; right: -50px; bottom: -80px; font-family: Arial, sans-serif; font-size: 320px; font-weight: 900; color: #fff; opacity: .04; line-height: 1; letter-spacing: -10px; pointer-events: none; }
+        .hero .container { position: relative; z-index: 2; display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; }
+        .hero-text h1 { font-size: 42px; line-height: 1.15; margin-bottom: 20px; font-weight: 700; letter-spacing: -.5px; }
+        .hero-text h1 span { color: #ffd700; }
+        .hero-text .subtitle { font-size: 17px; line-height: 1.7; color: #e8eff9; margin-bottom: 25px; }
+        .hero-text .bullets { list-style: none; margin-bottom: 25px; }
+        .hero-text .bullets li { padding: 6px 0; font-size: 15px; }
+        .hero-text .bullets li::before { content: '✓'; color: #ffd700; font-weight: 700; margin-right: 10px; font-size: 18px; }
 
-        .hero-badge {
-            flex: 1 1 35%;
-            min-width: 280px;
-            text-align: center;
-        }
-        .hero-badge .badge-card {
-            background: rgba(255, 255, 255, 0.08);
-            border: 1px solid rgba(255, 215, 0, 0.3);
-            border-radius: 10px;
-            padding: 30px;
-            backdrop-filter: blur(8px);
-        }
-        .hero-badge .badge-card .num {
-            font-family: 'Arial', sans-serif;
-            font-size: 64px;
-            font-weight: 900;
-            color: #ffd700;
-            line-height: 1;
-            letter-spacing: -2px;
-        }
-        .hero-badge .badge-card .label {
-            font-family: 'Arial', sans-serif;
-            font-size: 13px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            margin-top: 10px;
-            color: #fff;
-        }
-        .hero-badge .badge-card .desc {
-            font-size: 13px;
-            color: #b8c4d4;
-            margin-top: 12px;
-            line-height: 1.5;
-        }
+        .calc-box { background: #fff; color: #0b2a4a; padding: 32px; border-radius: 12px; box-shadow: 0 20px 50px rgba(0,0,0,.3); }
+        .calc-box h3 { font-family: Arial, sans-serif; font-size: 22px; margin-bottom: 6px; color: #0b2a4a; }
+        .calc-box .calc-sub { font-size: 12.5px; color: #4a6a8a; margin-bottom: 20px; line-height: 1.4; }
+        .calc-box label { font-family: Arial, sans-serif; font-size: 12.5px; font-weight: 600; display: block; margin-bottom: 6px; color: #0b2a4a; margin-top: 10px; }
+        .calc-box select, .calc-box input { width: 100%; padding: 11px 14px; border: 1px solid #d0d8e4; border-radius: 6px; font-size: 14px; font-family: Arial, sans-serif; color: #0b2a4a; background: #f9fbfd; }
+        .calc-box select:focus, .calc-box input:focus { outline: none; border-color: #0b2a4a; background: #fff; }
+        .calc-box button { width: 100%; background: #ffd700; color: #0b2a4a; padding: 15px; border: none; border-radius: 6px; font-family: Arial, sans-serif; font-size: 14px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; cursor: pointer; margin-top: 15px; transition: background .2s, transform .2s; }
+        .calc-box button:hover { background: #e6c200; transform: translateY(-2px); }
+        .calc-result { background: #e8eff9; border-left: 4px solid #0b2a4a; border-radius: 6px; padding: 16px; margin-top: 15px; display: none; }
+        .calc-result.show { display: block; }
+        .calc-result .label { font-size: 11.5px; color: #4a6a8a; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 5px; }
+        .calc-result .price { font-family: Arial, sans-serif; font-size: 26px; font-weight: 700; color: #0b2a4a; }
+        .calc-result .warning { font-size: 12px; color: #b8860b; margin-top: 10px; font-style: italic; line-height: 1.4; }
 
-        /* ==================== СЕКЦИИ ==================== */
-        section {
-            padding: 70px 0;
-        }
-        section.alt-bg {
-            background: #ffffff;
-        }
-        .section-header {
-            text-align: center;
-            margin-bottom: 50px;
-        }
-        .section-header .eyebrow {
-            font-family: 'Arial', sans-serif;
-            font-size: 12px;
-            color: #b8860b;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            margin-bottom: 12px;
-        }
-        .section-header h2 {
-            font-family: 'Georgia', serif;
-            font-size: 34px;
-            color: #0b2a4a;
-            font-weight: 700;
-            letter-spacing: -0.5px;
-            position: relative;
-            display: inline-block;
-            padding-bottom: 15px;
-        }
-        .section-header h2::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 60px;
-            height: 3px;
-            background: #b8860b;
-        }
+        section { padding: 80px 0; }
+        section.alt-bg { background: #f4f8fe; }
+        .section-header { text-align: center; margin-bottom: 55px; }
+        .section-header .eyebrow { font-family: Arial, sans-serif; font-size: 12px; color: #b8860b; text-transform: uppercase; letter-spacing: 3px; margin-bottom: 12px; }
+        .section-header h2 { font-size: 38px; color: #0b2a4a; font-weight: 700; letter-spacing: -.5px; position: relative; display: inline-block; padding-bottom: 15px; line-height: 1.2; }
+        .section-header h2::after { content: ''; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); width: 60px; height: 3px; background: #b8860b; }
+        .section-header .desc { font-size: 16px; color: #4a6a8a; margin-top: 15px; max-width: 700px; margin-left: auto; margin-right: auto; }
 
-        /* ==================== УСЛУГИ ==================== */
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
-            gap: 25px;
-        }
-        .service-card {
-            background: #fff;
-            border: 1px solid #d0d8e4;
-            border-radius: 8px;
-            padding: 35px 28px 30px;
-            transition: transform 0.25s, box-shadow 0.25s, border-color 0.25s;
-            position: relative;
-            overflow: hidden;
-        }
-        .service-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 4px;
-            background: linear-gradient(90deg, #0b2a4a 0%, #b8860b 100%);
-        }
-        .service-card:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 15px 40px rgba(11, 42, 74, 0.12);
-            border-color: #0b2a4a;
-        }
-        .service-card .icon {
-            font-size: 42px;
-            line-height: 1;
-            margin-bottom: 20px;
-            display: inline-block;
-        }
-        .service-card h3 {
-            font-family: 'Georgia', serif;
-            font-size: 20px;
-            color: #0b2a4a;
-            margin-bottom: 12px;
-            font-weight: 700;
-        }
-        .service-card .price {
-            font-family: 'Arial', sans-serif;
-            font-size: 15px;
-            color: #b8860b;
-            font-weight: 700;
-            margin-bottom: 15px;
-            letter-spacing: 0.5px;
-        }
-        .service-card p {
-            font-size: 14px;
-            color: #2c4a6a;
-            line-height: 1.65;
-        }
+        .stats { background: #0b2a4a; color: #fff; padding: 45px 0; }
+        .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 25px; text-align: center; }
+        .stat-item .num { font-family: Arial, sans-serif; font-size: 48px; font-weight: 900; color: #ffd700; line-height: 1; }
+        .stat-item .label { font-family: Arial, sans-serif; font-size: 13px; color: #b8c4d4; margin-top: 8px; text-transform: uppercase; letter-spacing: 1.5px; }
 
-        /* ==================== ПРЕИМУЩЕСТВА ==================== */
-        .advantages-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-            gap: 30px;
-        }
-        .advantage {
-            text-align: center;
-            padding: 20px;
-        }
-        .advantage .icon-circle {
-            width: 70px;
-            height: 70px;
-            border-radius: 50%;
-            background: #0b2a4a;
-            color: #ffd700;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 30px;
-            margin-bottom: 18px;
-        }
-        .advantage h4 {
-            font-family: 'Arial', sans-serif;
-            font-size: 15px;
-            color: #0b2a4a;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 10px;
-            font-weight: 700;
-        }
-        .advantage p {
-            font-size: 13.5px;
-            color: #4a6a8a;
-            line-height: 1.6;
-        }
+        .why-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
+        .why-card { text-align: center; padding: 40px 28px; background: #fff; border: 1px solid #e8eff9; border-radius: 12px; transition: transform .3s, box-shadow .3s; }
+        .why-card:hover { transform: translateY(-8px); box-shadow: 0 25px 50px rgba(11,42,74,.12); }
+        .why-card .icon { font-size: 52px; margin-bottom: 22px; }
+        .why-card h3 { font-family: Arial, sans-serif; font-size: 20px; color: #0b2a4a; margin-bottom: 14px; }
+        .why-card p { font-size: 15px; color: #2c4a6a; line-height: 1.7; }
 
-        /* ==================== ЦЕНЫ ==================== */
-        .price-table {
-            width: 100%;
-            max-width: 900px;
-            margin: 0 auto;
-            border-collapse: collapse;
-            background: #fff;
-            box-shadow: 0 4px 20px rgba(11, 42, 74, 0.06);
-            border-radius: 8px;
-            overflow: hidden;
-        }
-        .price-table thead {
-            background: #0b2a4a;
-            color: #fff;
-        }
-        .price-table th {
-            padding: 18px 20px;
-            font-family: 'Arial', sans-serif;
-            font-size: 13px;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            text-align: left;
-            font-weight: 600;
-        }
-        .price-table td {
-            padding: 18px 20px;
-            border-bottom: 1px solid #e8eff9;
-            font-size: 14px;
-            color: #2c4a6a;
-            vertical-align: top;
-        }
-        .price-table tbody tr:last-child td { border-bottom: none; }
-        .price-table tbody tr:hover { background: #f4f8fe; }
-        .price-table td strong {
-            color: #0b2a4a;
-            font-family: 'Arial', sans-serif;
-            font-size: 15px;
-        }
-        .price-table td .price-value {
-            font-family: 'Arial', sans-serif;
-            color: #b8860b;
-            font-weight: 700;
-            font-size: 15px;
-            white-space: nowrap;
-        }
+        .services-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; }
+        .service-card { background: #fff; border-radius: 12px; overflow: hidden; border: 1px solid #e8eff9; transition: transform .3s, box-shadow .3s; }
+        .service-card:hover { transform: translateY(-6px); box-shadow: 0 25px 50px rgba(11,42,74,.12); }
+        .service-card .s-header { background: linear-gradient(135deg, #0b2a4a 0%, #1a3c5e 100%); padding: 30px; color: #fff; }
+        .service-card .s-header .s-icon { font-size: 48px; margin-bottom: 12px; }
+        .service-card .s-header h3 { font-family: Arial, sans-serif; font-size: 22px; margin-bottom: 5px; }
+        .service-card .s-header .s-price { font-size: 16px; color: #ffd700; font-weight: 700; }
+        .service-card .s-body { padding: 25px 30px 30px; }
+        .service-card .s-body ul { list-style: none; margin-bottom: 20px; }
+        .service-card .s-body ul li { padding: 6px 0 6px 22px; position: relative; font-size: 14.5px; color: #2c4a6a; line-height: 1.5; }
+        .service-card .s-body ul li::before { content: '✓'; position: absolute; left: 0; top: 6px; color: #b8860b; font-weight: 700; }
+        .service-card .s-body .btn { width: 100%; justify-content: center; }
 
-        /* ==================== РАССРОЧКА ==================== */
-        .installment-block {
-            max-width: 900px;
-            margin: 0 auto;
-            background: linear-gradient(135deg, #fff8e6 0%, #fdf1cc 100%);
-            border: 2px solid #f0d78c;
-            border-radius: 10px;
-            padding: 40px;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-        .installment-block::before {
-            content: '💳';
-            position: absolute;
-            right: -20px;
-            bottom: -30px;
-            font-size: 180px;
-            opacity: 0.06;
-            pointer-events: none;
-        }
-        .installment-block h3 {
-            font-family: 'Georgia', serif;
-            font-size: 28px;
-            color: #b8860b;
-            margin-bottom: 15px;
-        }
-        .installment-block p {
-            font-size: 16px;
-            color: #2c4a6a;
-            margin-bottom: 10px;
-        }
-        .installment-block .accent {
-            font-family: 'Arial', sans-serif;
-            font-size: 18px;
-            font-weight: 700;
-            color: #0b2a4a;
-            margin-top: 15px;
-            letter-spacing: 0.5px;
-        }
+        .team-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 40px; max-width: 800px; margin: 0 auto; }
+        .team-card { text-align: center; padding: 40px 30px; background: #fff; border: 1px solid #e8eff9; border-radius: 12px; transition: transform .3s, box-shadow .3s; }
+        .team-card:hover { transform: translateY(-6px); box-shadow: 0 25px 50px rgba(11,42,74,.1); }
+        .team-photo { width: 200px; height: 200px; border-radius: 50%; background: linear-gradient(135deg, #0b2a4a 0%, #1a3c5e 100%); color: #ffd700; display: flex; align-items: center; justify-content: center; font-family: Arial, sans-serif; font-size: 48px; font-weight: 900; letter-spacing: 3px; margin: 0 auto 22px; border: 5px solid #ffd700; box-shadow: 0 10px 30px rgba(11,42,74,.15); overflow: hidden; }
+        .team-photo img { width: 100%; height: 100%; object-fit: cover; object-position: center top; }
+        .team-card .t-name { font-family: Arial, sans-serif; font-size: 22px; font-weight: 700; color: #0b2a4a; margin-bottom: 8px; }
+        .team-card .t-position { font-family: Arial, sans-serif; font-size: 14px; color: #b8860b; text-transform: uppercase; letter-spacing: 1.5px; font-weight: 600; margin-bottom: 15px; }
+        .team-card .t-desc { font-size: 14px; color: #4a6a8a; line-height: 1.6; }
 
-        /* ==================== О КОМПАНИИ ==================== */
-        .about-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 50px;
-            align-items: center;
-        }
-        .about-text h3 {
-            font-family: 'Georgia', serif;
-            font-size: 26px;
-            color: #0b2a4a;
-            margin-bottom: 20px;
-        }
-        .about-text p {
-            font-size: 15px;
-            color: #2c4a6a;
-            margin-bottom: 15px;
-            line-height: 1.7;
-        }
-        .team-cards {
-            display: flex;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
-        .team-card {
-            flex: 1 1 180px;
-            background: #fff;
-            border: 1px solid #d0d8e4;
-            border-radius: 8px;
-            padding: 25px 20px;
-            text-align: center;
-            transition: transform 0.25s, box-shadow 0.25s;
-        }
-        .team-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 10px 30px rgba(11, 42, 74, 0.1);
-        }
-        .team-card .avatar {
-            width: 70px;
-            height: 70px;
-            margin: 0 auto 15px;
-            border-radius: 50%;
-            background: #0b2a4a;
-            color: #ffd700;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-family: 'Arial', sans-serif;
-            font-size: 22px;
-            font-weight: 700;
-            letter-spacing: 1px;
-        }
-        .team-card .team-name {
-            font-family: 'Arial', sans-serif;
-            font-size: 15px;
-            font-weight: 700;
-            color: #0b2a4a;
-            margin-bottom: 5px;
-            line-height: 1.3;
-        }
-        .team-card .team-position {
-            font-size: 12px;
-            color: #b8860b;
-            text-transform: uppercase;
-            letter-spacing: 1.2px;
-            font-weight: 600;
-        }
+        .objects-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+        .object-card { background: #fff; border: 1px solid #e8eff9; border-radius: 12px; padding: 32px 22px; text-align: center; transition: transform .3s, box-shadow .3s; }
+        .object-card:hover { transform: translateY(-6px); box-shadow: 0 20px 40px rgba(11,42,74,.1); border-color: #0b2a4a; }
+        .object-card .o-icon { font-size: 46px; margin-bottom: 15px; }
+        .object-card h4 { font-family: Arial, sans-serif; font-size: 17px; color: #0b2a4a; margin-bottom: 8px; }
+        .object-card p { font-size: 13.5px; color: #4a6a8a; line-height: 1.5; }
 
-        /* ==================== КОНТАКТЫ ==================== */
-        .contacts-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
-            gap: 25px;
-        }
-        .contact-card {
-            background: #fff;
-            border: 1px solid #d0d8e4;
-            border-radius: 8px;
-            padding: 30px 25px;
-            text-align: center;
-            transition: border-color 0.25s, transform 0.25s;
-        }
-        .contact-card:hover {
-            border-color: #0b2a4a;
-            transform: translateY(-4px);
-        }
-        .contact-card .contact-icon {
-            font-size: 32px;
-            margin-bottom: 15px;
-        }
-        .contact-card h4 {
-            font-family: 'Arial', sans-serif;
-            font-size: 12px;
-            color: #4a6a8a;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            margin-bottom: 12px;
-            font-weight: 600;
-        }
-        .contact-card .contact-value {
-            font-family: 'Arial', sans-serif;
-            font-size: 16px;
-            font-weight: 700;
-            color: #0b2a4a;
-            line-height: 1.5;
-            word-wrap: break-word;
-        }
-        .contact-card .contact-value a { color: #0b2a4a; }
-        .contact-card .contact-value a:hover { color: #b8860b; }
+        .steps-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
+        .step-card { background: #fff; border-radius: 12px; padding: 35px 28px; border-top: 4px solid #b8860b; box-shadow: 0 6px 20px rgba(11,42,74,.06); transition: transform .3s, box-shadow .3s; }
+        .step-card:hover { transform: translateY(-6px); box-shadow: 0 20px 40px rgba(11,42,74,.12); }
+        .step-card .num { font-family: Arial, sans-serif; font-size: 46px; font-weight: 900; color: #e8eff9; line-height: 1; margin-bottom: 12px; }
+        .step-card h4 { font-family: Arial, sans-serif; font-size: 18px; color: #0b2a4a; margin-bottom: 12px; }
+        .step-card p { font-size: 14.5px; color: #2c4a6a; line-height: 1.6; }
+        .step-card .result { margin-top: 14px; font-size: 13px; color: #b8860b; font-weight: 600; font-style: italic; }
 
-        /* ==================== РЕКВИЗИТЫ ==================== */
-        .requisites {
-            background: #0b2a4a;
-            color: #e8eff9;
-            padding: 50px 0;
-        }
-        .requisites h3 {
-            font-family: 'Arial', sans-serif;
-            font-size: 14px;
-            color: #ffd700;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            margin-bottom: 25px;
-            text-align: center;
-        }
-        .requisites-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
-            font-size: 13.5px;
-            line-height: 1.7;
-        }
-        .requisites-grid p { margin-bottom: 6px; }
-        .requisites-grid strong { color: #fff; }
-        .requisites-grid a { color: #ffd700; }
+        .reviews-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
+        .review-card { background: #fff; border-radius: 12px; padding: 32px; border: 1px solid #e8eff9; position: relative; transition: transform .3s, box-shadow .3s; }
+        .review-card:hover { transform: translateY(-5px); box-shadow: 0 20px 40px rgba(11,42,74,.1); }
+        .review-card::before { content: '"'; position: absolute; top: 15px; left: 25px; font-size: 90px; color: #e8eff9; font-family: Georgia, serif; line-height: 1; }
+        .review-card .stars { color: #ffd700; margin-bottom: 15px; font-size: 16px; position: relative; z-index: 2; }
+        .review-card p { font-size: 14.5px; line-height: 1.7; color: #2c4a6a; position: relative; z-index: 2; margin-bottom: 20px; font-style: italic; }
+        .review-card .author { border-top: 1px solid #e8eff9; padding-top: 15px; font-family: Arial, sans-serif; }
+        .review-card .author .name { font-weight: 700; color: #0b2a4a; font-size: 15px; }
+        .review-card .author .info { font-size: 12px; color: #8a9aae; margin-top: 3px; }
 
-        /* ==================== ФУТЕР ==================== */
-        footer.main-footer {
-            background: #08192b;
-            color: #a8b8c8;
-            padding: 30px 0;
-            text-align: center;
-            font-family: 'Arial', sans-serif;
-            font-size: 12.5px;
-            letter-spacing: 0.3px;
-        }
-        footer.main-footer .footer-brand {
-            font-family: 'Georgia', serif;
-            font-size: 16px;
-            color: #fff;
-            margin-bottom: 10px;
-            letter-spacing: 1px;
-        }
-        footer.main-footer .footer-slogan {
-            color: #b8860b;
-            font-style: italic;
-            margin-bottom: 15px;
-        }
-        footer.main-footer a { color: #ffd700; }
-        footer.main-footer a:hover { color: #fff; }
+        .faq-list { max-width: 900px; margin: 0 auto; }
+        .faq-item { background: #fff; border: 1px solid #e8eff9; border-radius: 10px; margin-bottom: 12px; overflow: hidden; transition: border-color .2s; }
+        .faq-item:hover { border-color: #b8860b; }
+        .faq-item .q { padding: 22px 28px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-family: Arial, sans-serif; font-size: 16px; font-weight: 600; color: #0b2a4a; }
+        .faq-item .q::after { content: '+'; font-size: 26px; color: #b8860b; font-weight: 400; transition: transform .3s; }
+        .faq-item.open .q::after { transform: rotate(45deg); }
+        .faq-item .a { max-height: 0; overflow: hidden; transition: max-height .4s ease, padding .3s ease; padding: 0 28px; font-size: 15px; color: #2c4a6a; line-height: 1.7; }
+        .faq-item.open .a { max-height: 500px; padding: 0 28px 22px; }
 
-        /* ==================== ПЛАВАЮЩАЯ КНОПКА ==================== */
-        .floating-call {
-            position: fixed;
-            bottom: 25px;
-            right: 25px;
-            width: 60px;
-            height: 60px;
-            background: #ffd700;
-            color: #0b2a4a;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 26px;
-            box-shadow: 0 8px 25px rgba(255, 215, 0, 0.4);
-            cursor: pointer;
-            z-index: 999;
-            text-decoration: none;
-            animation: pulse 2s infinite;
-        }
-        .floating-call:hover { background: #e6c200; color: #0b2a4a; transform: scale(1.05); }
-        @keyframes pulse {
-            0%, 100% { box-shadow: 0 8px 25px rgba(255, 215, 0, 0.4); }
-            50% { box-shadow: 0 8px 35px rgba(255, 215, 0, 0.7); }
-        }
+        .partners-block { background: linear-gradient(135deg, #0b2a4a 0%, #1a3c5e 100%); color: #fff; border-radius: 15px; padding: 55px 45px; text-align: center; position: relative; overflow: hidden; }
+        .partners-block::before { content: 'B2B'; position: absolute; right: -30px; bottom: -60px; font-family: Arial, sans-serif; font-size: 200px; font-weight: 900; color: #fff; opacity: .04; line-height: 1; pointer-events: none; }
+        .partners-block h3 { font-size: 32px; margin-bottom: 18px; position: relative; z-index: 2; }
+        .partners-block > p { font-size: 16px; color: #e8eff9; max-width: 700px; margin: 0 auto 35px; position: relative; z-index: 2; line-height: 1.7; }
+        .partners-block .benefits { display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px; margin-top: 35px; text-align: left; position: relative; z-index: 2; }
+        .partners-block .benefits .b-item { background: rgba(255,255,255,.06); border-left: 4px solid #ffd700; padding: 22px; border-radius: 6px; }
+        .partners-block .benefits .b-item strong { display: block; font-family: Arial, sans-serif; font-size: 15px; margin-bottom: 8px; color: #ffd700; }
+        .partners-block .benefits .b-item span { font-size: 13.5px; color: #b8c4d4; line-height: 1.6; }
 
-        /* ==================== АДАПТИВ ==================== */
-        @media (max-width: 900px) {
-            .about-grid { grid-template-columns: 1fr; gap: 30px; }
+        .contact-form-block { background: #fff; border: 2px solid #0b2a4a; border-radius: 15px; padding: 55px 45px; max-width: 700px; margin: 0 auto; text-align: center; box-shadow: 0 20px 50px rgba(11,42,74,.1); }
+        .contact-form-block h3 { font-size: 30px; color: #0b2a4a; margin-bottom: 12px; line-height: 1.2; }
+        .contact-form-block > p { font-size: 15px; color: #4a6a8a; margin-bottom: 28px; }
+        .contact-form-block form { display: grid; gap: 12px; }
+        .contact-form-block input, .contact-form-block select, .contact-form-block textarea { width: 100%; padding: 15px 18px; border: 1px solid #d0d8e4; border-radius: 8px; font-size: 15px; font-family: Arial, sans-serif; color: #0b2a4a; background: #f9fbfd; transition: border-color .2s, background .2s; }
+        .contact-form-block input:focus, .contact-form-block select:focus, .contact-form-block textarea:focus { outline: none; border-color: #0b2a4a; background: #fff; }
+        .contact-form-block textarea { min-height: 90px; resize: vertical; }
+        .contact-form-block button { background: #0b2a4a; color: #fff; padding: 17px; border: none; border-radius: 8px; font-family: Arial, sans-serif; font-size: 15px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; cursor: pointer; transition: background .2s, transform .2s; }
+        .contact-form-block button:hover { background: #b8860b; transform: translateY(-2px); }
+        .contact-form-block .privacy { font-size: 11.5px; color: #8a9aae; margin-top: 12px; line-height: 1.4; }
+        .form-success { background: #e8f5e9; color: #2e7d32; padding: 15px; border-radius: 8px; margin-top: 15px; display: none; font-size: 14px; }
+        .form-success.show { display: block; }
+
+        .cta-strip { background: linear-gradient(135deg, #b8860b 0%, #d4a017 100%); color: #fff; padding: 50px 0; text-align: center; }
+        .cta-strip h3 { font-size: 30px; margin-bottom: 12px; }
+        .cta-strip p { font-size: 16px; margin-bottom: 25px; opacity: .95; }
+
+        footer { background: #08192b; color: #a8b8c8; padding: 60px 0 30px; font-family: Arial, sans-serif; font-size: 13.5px; }
+        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; margin-bottom: 40px; }
+        .footer-col h4 { color: #fff; font-size: 14px; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 18px; }
+        .footer-col ul { list-style: none; }
+        .footer-col ul li { margin-bottom: 10px; }
+        .footer-col a { color: #a8b8c8; }
+        .footer-col a:hover { color: #ffd700; }
+        .footer-brand { font-family: Georgia, serif; font-size: 19px; color: #fff; margin-bottom: 12px; }
+        .footer-slogan { color: #b8860b; font-style: italic; margin-bottom: 15px; }
+        .footer-bottom { border-top: 1px solid #1a2c3e; padding-top: 25px; text-align: center; font-size: 12px; color: #6a7a8a; line-height: 1.7; }
+
+        .floating-call { position: fixed; bottom: 25px; right: 25px; width: 64px; height: 64px; background: #ffd700; color: #0b2a4a; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 28px; box-shadow: 0 8px 25px rgba(255,215,0,.5); z-index: 999; animation: pulse 2s infinite; }
+        .floating-call:hover { color: #0b2a4a; transform: scale(1.08); }
+        @keyframes pulse { 0%,100% { box-shadow: 0 8px 25px rgba(255,215,0,.4); } 50% { box-shadow: 0 8px 35px rgba(255,215,0,.9); } }
+
+        .floating-wa { position: fixed; bottom: 100px; right: 25px; width: 64px; height: 64px; background: #25D366; color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 32px; box-shadow: 0 8px 25px rgba(37,211,102,.5); z-index: 999; }
+        .floating-wa:hover { color: #fff; transform: scale(1.08); }
+
+        @media (max-width: 992px) {
+            .hero .container { grid-template-columns: 1fr; gap: 40px; }
             .hero-text h1 { font-size: 32px; }
-            .section-header h2 { font-size: 26px; }
-            .hero-badge .badge-card .num { font-size: 48px; }
+            .why-grid, .steps-grid, .reviews-grid, .services-grid, .team-grid { grid-template-columns: 1fr; }
+            .objects-grid { grid-template-columns: repeat(2, 1fr); }
+            .partners-block .benefits { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: 1fr 1fr; }
+            .stats-grid { grid-template-columns: repeat(2, 1fr); }
         }
         @media (max-width: 600px) {
             .main-header .container { flex-direction: column; align-items: flex-start; }
             .header-contacts { text-align: left; }
             nav.main-nav ul { flex-direction: column; }
             nav.main-nav li a { text-align: center; padding: 12px 15px; }
-            .hero-text h1 { font-size: 26px; }
-            .top-bar .container { justify-content: center; text-align: center; }
-            section { padding: 45px 0; }
-            .installment-block { padding: 25px 20px; }
+            .hero-text h1 { font-size: 24px; }
+            .objects-grid { grid-template-columns: 1fr; }
+            .section-header h2 { font-size: 26px; }
+            section { padding: 50px 0; }
+            .partners-block { padding: 35px 22px; }
+            .contact-form-block { padding: 35px 22px; }
+            .footer-grid { grid-template-columns: 1fr; }
+            .stats-grid { grid-template-columns: 1fr; }
+            .cta-strip h3 { font-size: 22px; }
         }
     </style>
 </head>
 <body>
 
-<!-- ============ ТОП-БАР ============ -->
 <div class="top-bar">
     <div class="container">
-        <div class="top-contacts">
+        <div class="contacts">
             <span>📞 <a href="tel:+79939527720">8-993-952-77-20</a></span>
             <span>📞 <a href="tel:+79939537770">8-993-953-77-70</a></span>
             <span>✉️ <a href="mailto:info@primeclimate-nsk.ru">info@primeclimate-nsk.ru</a></span>
         </div>
-        <div class="top-contacts">
+        <div class="contacts">
             <span>🕐 Ежедневно 8:00 – 20:00</span>
             <span>📍 Новосибирск и область</span>
         </div>
     </div>
 </div>
 
-<!-- ============ ШАПКА ============ -->
 <header class="main-header">
     <div class="container">
         <div class="logo-block">
             <img src="logo.png" alt="Prime Climate Engineering">
-            <div class="brand-text">
+            <div>
                 <div class="brand-name">PRIME CLIMATE<br>ENGINEERING</div>
                 <div class="brand-slogan">Инженерные решения для жизни</div>
             </div>
@@ -724,329 +253,537 @@
     </div>
 </header>
 
-<!-- ============ НАВИГАЦИЯ ============ -->
 <nav class="main-nav">
     <ul>
         <li><a href="#services">Услуги</a></li>
-        <li><a href="#advantages">Преимущества</a></li>
-        <li><a href="#prices">Цены</a></li>
-        <li><a href="#about">О компании</a></li>
-        <li><a href="#contacts">Контакты</a></li>
+        <li><a href="#why">Преимущества</a></li>
+        <li><a href="#team">Команда</a></li>
+        <li><a href="#how">Как работаем</a></li>
+        <li><a href="#reviews">Отзывы</a></li>
+        <li><a href="#faq">Вопросы</a></li>
+        <li><a href="#contact">Контакты</a></li>
     </ul>
 </nav>
 
-<!-- ============ БАННЕР ============ -->
 <section class="hero">
     <div class="container">
         <div class="hero-text">
-            <div class="hero-eyebrow">Новосибирск и область</div>
-            <h1>Инженерные решения<br>для вашего <span class="accent">комфорта</span></h1>
-            <p class="hero-subtitle">
-                Профессиональный монтаж кондиционеров, электромонтаж и внутренняя отделка под ключ. Официальный договор, гарантия <strong style="color:#ffd700;">5 лет</strong>, бесплатный выезд на замер и рассрочка от Т-Банка.
-            </p>
-            <div class="hero-cta">
-                <a href="tel:+79939527720" class="btn btn-gold">📞 Позвонить сейчас</a>
-                <a href="#services" class="btn btn-outline">Наши услуги</a>
-            </div>
+            <h1>Инженерные решения <span>для жизни</span> в Новосибирске</h1>
+            <p class="subtitle">Кондиционеры, электрика, внутренняя отделка и светодиодные вывески — под ключ, одним подрядчиком. Официальное ООО с 2026 года.</p>
+            <ul class="bullets">
+                <li>Договор, чек, <strong>гарантия 2 года</strong> на все работы</li>
+                <li>Свои материалы — экономия до 30% для вас</li>
+                <li>Выезд на замер бесплатно, в день обращения</li>
+                <li>Работаем с физлицами и организациями</li>
+                <li>Рассрочка от Т-Банка без переплат</li>
+            </ul>
         </div>
-        <div class="hero-badge">
-            <div class="badge-card">
-                <div class="num">5</div>
-                <div class="label">лет гарантии</div>
-                <div class="desc">На все виды выполненных работ. Официальный договор и гарантийный сертификат.</div>
+
+        <div class="calc-box">
+            <h3>Примерный расчёт стоимости</h3>
+            <p class="calc-sub">Укажите услугу и объём — получите ориентировочную цену. Точная стоимость — только после бесплатного замера.</p>
+            <form id="calcForm" onsubmit="return calcPrice(event)">
+                <label>Что нужно сделать?</label>
+                <select id="calcService" required>
+                    <option value="">Выберите услугу</option>
+                    <option value="montazh">Монтаж кондиционера</option>
+                    <option value="obsluzhivanie">Обслуживание кондиционера</option>
+                    <option value="elektrika">Электромонтаж</option>
+                    <option value="otdelka">Внутренняя отделка</option>
+                    <option value="vyveska">Светодиодная вывеска</option>
+                </select>
+
+                <label>Площадь / количество (м² или шт.)</label>
+                <input type="number" id="calcAmount" placeholder="Например, 30" min="1" required>
+
+                <button type="submit">Рассчитать</button>
+            </form>
+
+            <div class="calc-result" id="calcResult">
+                <div class="label">Примерная стоимость:</div>
+                <div class="price" id="calcPrice">—</div>
+                <p class="warning">⚠ Это ориентировочная цена. Точную стоимость назовём после бесплатного замера и осмотра объекта.</p>
             </div>
         </div>
     </div>
 </section>
 
-<!-- ============ УСЛУГИ ============ -->
-<section id="services">
+<section class="stats">
     <div class="container">
-        <div class="section-header">
-            <div class="eyebrow">Что мы делаем</div>
-            <h2>Наши услуги</h2>
-        </div>
-        <div class="services-grid">
-            <div class="service-card">
-                <div class="icon">❄️</div>
-                <h3>Монтаж кондиционеров</h3>
-                <div class="price">от 14 000 ₽</div>
-                <p>Установка сплит-систем любых брендов. Трасса до 3 метров включена в стоимость. Алмазное бурение, аккуратно и без пыли.</p>
+        <div class="stats-grid">
+            <div class="stat-item">
+                <div class="num">2</div>
+                <div class="label">Года гарантии</div>
             </div>
-            <div class="service-card">
-                <div class="icon">🔧</div>
-                <h3>Заправка и обслуживание</h3>
-                <div class="price">от 2 500 ₽</div>
-                <p>Чистка, дезинфекция, заправка фреоном (R32, R410A), диагностика. Продлеваем срок службы оборудования.</p>
+            <div class="stat-item">
+                <div class="num">5+</div>
+                <div class="label">Лет опыта</div>
             </div>
-            <div class="service-card">
-                <div class="icon">⚡</div>
-                <h3>Электромонтаж под ключ</h3>
-                <div class="price">от 1 000 ₽/м²</div>
-                <p>Замена проводки, сборка электрощитков, розетки, освещение. Зависит от объёма работ и материала стен.</p>
+            <div class="stat-item">
+                <div class="num">24/7</div>
+                <div class="label">Приём заявок</div>
             </div>
-            <div class="service-card">
-                <div class="icon">🏠</div>
-                <h3>Внутренняя отделка</h3>
-                <div class="price">от 1 000 ₽/м²</div>
-                <p>Штукатурка, ГКЛ, стяжка, обои, покраска. Доведём ваш объект до идеала после монтажных работ.</p>
-            </div>
-            <div class="service-card">
-                <div class="icon">⚙️</div>
-                <h3>Алмазное бурение</h3>
-                <div class="price">от 1 500 ₽</div>
-                <p>Технологичные отверстия в бетоне, кирпиче и плитке. Без пыли, сколов и грязи. Профессиональный инструмент.</p>
-            </div>
-            <div class="service-card">
-                <div class="icon">🔩</div>
-                <h3>Комплексный подход</h3>
-                <div class="price">скидка 10%</div>
-                <p>Закажите монтаж кондиционера + электромонтаж в одном договоре и получите скидку 10% на весь комплекс работ.</p>
+            <div class="stat-item">
+                <div class="num">100%</div>
+                <div class="label">Официально</div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- ============ ПРЕИМУЩЕСТВА ============ -->
-<section id="advantages" class="alt-bg">
+<section id="why">
     <div class="container">
         <div class="section-header">
             <div class="eyebrow">Почему выбирают нас</div>
             <h2>Наши преимущества</h2>
+            <p class="desc">Мы молодая компания, но за плечами нашей команды — более 5 лет работы на объектах Новосибирска и области</p>
         </div>
-        <div class="advantages-grid">
-            <div class="advantage">
-                <div class="icon-circle">📋</div>
-                <h4>Официально</h4>
-                <p>Работаем как ООО. Договор, чек и гарантийный сертификат на 5 лет. Работаем с физлицами и организациями.</p>
+        <div class="why-grid">
+            <div class="why-card">
+                <div class="icon">📋</div>
+                <h3>Официальный договор</h3>
+                <p>Работаем как ООО «ПРАЙМ КЛИМАТ ИНЖИНИРИНГ». Договор, чек, гарантия 2 года на все виды работ. Принимаем оплату наличными, картой и по безналу.</p>
             </div>
-            <div class="advantage">
-                <div class="icon-circle">💰</div>
-                <h4>Свои материалы</h4>
-                <p>Закупаем качественные комплектующие по оптовым ценам. Экономия для вас до 30% без потери качества.</p>
+            <div class="why-card">
+                <div class="icon">⚙️</div>
+                <h3>Опытные мастера</h3>
+                <p>Наши специалисты работают на объектах более 5 лет. Свой профессиональный инструмент, аккуратный подход, уборка после работ.</p>
             </div>
-            <div class="advantage">
-                <div class="icon-circle">⚙️</div>
-                <h4>Проф. инструмент</h4>
-                <p>Вакуумные насосы, алмазные коронки, штроборез с пылесосом, лазерные уровни. Гарантируем надёжный результат.</p>
-            </div>
-            <div class="advantage">
-                <div class="icon-circle">⏱</div>
-                <h4>Оперативно</h4>
-                <p>Выезд на замер в день обращения, бесплатная консультация по материалам и срокам выполнения работ.</p>
-            </div>
-            <div class="advantage">
-                <div class="icon-circle">🔧</div>
-                <h4>Комплексно</h4>
-                <p>Один исполнитель на все виды работ: кондиционер, электрика, отделка. Без поиска разных подрядчиков.</p>
-            </div>
-            <div class="advantage">
-                <div class="icon-circle">🛡</div>
-                <h4>Прозрачно</h4>
-                <p>Фиксированная цена в смете. Никаких скрытых доплат в процессе работ. НДС не облагается (УСН 6%).</p>
+            <div class="why-card">
+                <div class="icon">⏱</div>
+                <h3>Выезд в день звонка</h3>
+                <p>Бесплатный замер в день обращения. Оперативно называем точную цену без скрытых доплат. Начинаем работу сразу после согласования.</p>
             </div>
         </div>
     </div>
 </section>
 
-<!-- ============ ЦЕНЫ ============ -->
-<section id="prices">
+<section id="services" class="alt-bg">
     <div class="container">
         <div class="section-header">
-            <div class="eyebrow">Прозрачное ценообразование</div>
-            <h2>Основные цены</h2>
+            <div class="eyebrow">Полный комплекс услуг</div>
+            <h2>Что мы делаем</h2>
+            <p class="desc">Один подрядчик на все работы — вам не нужно искать разных мастеров</p>
         </div>
-        <table class="price-table">
-            <thead>
-                <tr>
-                    <th>Услуга</th>
-                    <th>Стоимость</th>
-                    <th>Примечание</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><strong>Установка кондиционера</strong></td>
-                    <td><span class="price-value">от 14 000 ₽</span></td>
-                    <td>Трасса до 3 метров включена. Дополнительный метр — отдельно.</td>
-                </tr>
-                <tr>
-                    <td><strong>Заправка фреоном</strong></td>
-                    <td><span class="price-value">от 2 500 ₽</span></td>
-                    <td>Зависит от модели и типа фреона (R32, R410A).</td>
-                </tr>
-                <tr>
-                    <td><strong>Электромонтаж</strong></td>
-                    <td><span class="price-value">от 1 000 ₽/м²</span></td>
-                    <td>Зависит от объёма работ и материала стен.</td>
-                </tr>
-                <tr>
-                    <td><strong>Внутренняя отделка</strong></td>
-                    <td><span class="price-value">от 1 000 ₽/м²</span></td>
-                    <td>Штукатурка, ГКЛ, стяжка, обои, покраска.</td>
-                </tr>
-                <tr>
-                    <td><strong>Алмазное бурение</strong></td>
-                    <td><span class="price-value">от 1 500 ₽</span></td>
-                    <td>Отверстия в бетоне, кирпиче, плитке.</td>
-                </tr>
-                <tr>
-                    <td><strong>Комплексный заказ</strong></td>
-                    <td><span class="price-value">скидка 10%</span></td>
-                    <td>При заказе монтажа кондиционера + электромонтажа.</td>
-                </tr>
-            </tbody>
-        </table>
-        <p style="text-align:center; margin-top:25px; font-size:14px; color:#4a6a8a; font-style:italic;">
-            * Итоговая стоимость рассчитывается после бесплатного выезда мастера на замер.
-        </p>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="s-header">
+                    <div class="s-icon">❄️</div>
+                    <h3>Монтаж и обслуживание кондиционеров</h3>
+                    <div class="s-price">от 14 000 ₽</div>
+                </div>
+                <div class="s-body">
+                    <ul>
+                        <li>Установка сплит-систем любых марок</li>
+                        <li>Трасса до 3 метров включена</li>
+                        <li>Заправка фреоном, чистка, дезинфекция</li>
+                        <li>Демонтаж и переустановка</li>
+                        <li>Диагностика и устранение неисправностей</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-navy">Оставить заявку</a>
+                </div>
+            </div>
+            <div class="service-card">
+                <div class="s-header">
+                    <div class="s-icon">⚡</div>
+                    <h3>Электромонтаж под ключ</h3>
+                    <div class="s-price">от 1 000 ₽/м²</div>
+                </div>
+                <div class="s-body">
+                    <ul>
+                        <li>Замена проводки (медь, по расчёту)</li>
+                        <li>Сборка и монтаж электрощитков</li>
+                        <li>Розетки, выключатели, освещение</li>
+                        <li>Подключение плит, бойлеров, тёплых полов</li>
+                        <li>Датчики движения и умный дом</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-navy">Оставить заявку</a>
+                </div>
+            </div>
+            <div class="service-card">
+                <div class="s-header">
+                    <div class="s-icon">🏠</div>
+                    <h3>Внутренняя отделка</h3>
+                    <div class="s-price">от 1 000 ₽/м²</div>
+                </div>
+                <div class="s-body">
+                    <ul>
+                        <li>Штукатурка стен и потолков</li>
+                        <li>Монтаж ГКЛ, стяжка пола</li>
+                        <li>Поклейка обоев, покраска</li>
+                        <li>Плиточные работы</li>
+                        <li>Финишная отделка под ключ</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-navy">Оставить заявку</a>
+                </div>
+            </div>
+            <div class="service-card">
+                <div class="s-header">
+                    <div class="s-icon">💡</div>
+                    <h3>Светодиодные вывески</h3>
+                    <div class="s-price">от 5 000 ₽</div>
+                </div>
+                <div class="s-body">
+                    <ul>
+                        <li>Изготовление LED-вывесок</li>
+                        <li>Лайтбоксы, объёмные буквы</li>
+                        <li>Подсветка витрин</li>
+                        <li>Монтаж и подключение</li>
+                        <li>Обслуживание и ремонт</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-navy">Оставить заявку</a>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 
-<!-- ============ РАССРОЧКА ============ -->
+<section id="team">
+    <div class="container">
+        <div class="section-header">
+            <div class="eyebrow">Руководство</div>
+            <h2>Наша команда</h2>
+            <p class="desc">Мы всегда на связи и лично контролируем каждый объект</p>
+        </div>
+        <div class="team-grid">
+            <div class="team-card">
+                <div class="team-photo">
+                    <img src="gurimenko.png" alt="Гурименко Дмитрий Андреевич">
+                </div>
+                <div class="t-name">Гурименко Дмитрий Андреевич</div>
+                <div class="t-position">Генеральный директор</div>
+                <div class="t-desc">Отвечает за развитие компании, работу с организациями, тендеры и стратегию.</div>
+            </div>
+            <div class="team-card">
+                <div class="team-photo">
+                    <img src="mochalov.png" alt="Мочалов Евгений Сергеевич">
+                </div>
+                <div class="t-name">Мочалов Евгений Сергеевич</div>
+                <div class="t-position">Исполнительный директор</div>
+                <div class="t-desc">Контролирует выполнение работ, руководит бригадами, ведёт объекты от замера до сдачи.</div>
+            </div>
+        </div>
+    </div>
+</section>
+
 <section class="alt-bg">
     <div class="container">
-        <div class="installment-block">
-            <h3>💳 Рассрочка от Т-Банка</h3>
-            <p>Оформите рассрочку на наши услуги и оборудование прямо на объекте или онлайн.</p>
-            <p><strong>Срок от 3 до 12 месяцев • Без первого взноса • Переплата 0%</strong></p>
-            <p>Оформление за 5 минут по паспорту. Доступно гражданам РФ с постоянной регистрацией.</p>
-            <div class="accent">Вы платите ровно стоимость работ — без скрытых процентов!</div>
+        <div class="section-header">
+            <div class="eyebrow">С какими объектами работаем</div>
+            <h2>Типы объектов</h2>
+        </div>
+        <div class="objects-grid">
+            <div class="object-card">
+                <div class="o-icon">🏢</div>
+                <h4>Квартиры</h4>
+                <p>Кондиционеры, электрика, отделка</p>
+            </div>
+            <div class="object-card">
+                <div class="o-icon">🏡</div>
+                <h4>Частные дома</h4>
+                <p>Комплексные работы под ключ</p>
+            </div>
+            <div class="object-card">
+                <div class="o-icon">🏬</div>
+                <h4>Офисы и магазины</h4>
+                <p>Электрика, кондиционеры, вывески</p>
+            </div>
+            <div class="object-card">
+                <div class="o-icon">☕</div>
+                <h4>Кафе и салоны</h4>
+                <p>Вентиляция, климат, вывески</p>
+            </div>
         </div>
     </div>
 </section>
 
-<!-- ============ О КОМПАНИИ ============ -->
-<section id="about">
+<section id="how">
     <div class="container">
         <div class="section-header">
-            <div class="eyebrow">Кто мы</div>
-            <h2>О компании</h2>
+            <div class="eyebrow">Простой и понятный процесс</div>
+            <h2>Как мы работаем</h2>
+            <p class="desc">От заявки до готового результата — 6 простых шагов</p>
         </div>
-        <div class="about-grid">
-            <div class="about-text">
-                <h3>Prime Climate Engineering</h3>
-                <p>
-                    Инженерная компания, специализирующаяся на монтаже и обслуживании климатического оборудования, электромонтажных работах и внутренней отделке в Новосибирске и Новосибирской области.
-                </p>
-                <p>
-                    Мы — команда инженеров и монтажников с профильным образованием и практическим опытом. Работаем официально: являемся юридическим лицом (ООО), заключаем договоры, выдаём чеки и гарантируем качество выполненных работ в течение <strong>5 (пяти) лет</strong>.
-                </p>
-                <p>
-                    Наша миссия — обеспечить клиентам комфорт и безопасность в доме или на объекте, решая весь спектр задач «под ключ» одним подрядчиком: от подбора оборудования и проектирования до финишной отделки.
-                </p>
+        <div class="steps-grid">
+            <div class="step-card">
+                <div class="num">01</div>
+                <h4>Заявка и консультация</h4>
+                <p>Вы оставляете заявку или звоните. Мы уточняем задачу и отвечаем на вопросы бесплатно.</p>
+                <div class="result">→ Понимание задачи и сроков</div>
             </div>
-            <div class="team-cards">
-                <div class="team-card">
-                    <div class="avatar">ДА</div>
-                    <div class="team-name">Гурименко Дмитрий Андреевич</div>
-                    <div class="team-position">Генеральный директор</div>
-                </div>
-                <div class="team-card">
-                    <div class="avatar">ЕС</div>
-                    <div class="team-name">Мочалов Евгений Сергеевич</div>
-                    <div class="team-position">Исполнительный директор</div>
-                </div>
+            <div class="step-card">
+                <div class="num">02</div>
+                <h4>Бесплатный выезд на замер</h4>
+                <p>Мастер приезжает в удобное время, оценивает объём работ и даёт точную смету.</p>
+                <div class="result">→ Точная смета без доплат</div>
+            </div>
+            <div class="step-card">
+                <div class="num">03</div>
+                <h4>Договор и сроки</h4>
+                <p>Подписываем договор, фиксируем цену и сроки. Материалы закупаем по оптовым ценам.</p>
+                <div class="result">→ Договор с гарантией 2 года</div>
+            </div>
+            <div class="step-card">
+                <div class="num">04</div>
+                <h4>Выполнение работ</h4>
+                <p>Работаем аккуратно, с профессиональным инструментом. Каждый этап согласовываем с вами.</p>
+                <div class="result">→ Качественный результат в срок</div>
+            </div>
+            <div class="step-card">
+                <div class="num">05</div>
+                <h4>Сдача и уборка</h4>
+                <p>Проверяем всё вместе с вами, убираем за собой. Выдаём акт выполненных работ.</p>
+                <div class="result">→ Готовый объект под ключ</div>
+            </div>
+            <div class="step-card">
+                <div class="num">06</div>
+                <h4>Гарантия и обслуживание</h4>
+                <p>Гарантия 2 года на все работы. Бесплатный выезд специалиста при гарантийном случае.</p>
+                <div class="result">→ Долгая и надёжная работа</div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- ============ КОНТАКТЫ ============ -->
-<section id="contacts" class="alt-bg">
+<section class="cta-strip">
+    <div class="container">
+        <h3>Нужен мастер прямо сейчас?</h3>
+        <p>Позвоните — проконсультируем бесплатно и назовём точную цену</p>
+        <a href="tel:+79939527720" class="btn btn-navy" style="font-size: 16px; padding: 18px 35px;">📞 8-993-952-77-20</a>
+    </div>
+</section>
+
+<section id="reviews" class="alt-bg">
     <div class="container">
         <div class="section-header">
-            <div class="eyebrow">Свяжитесь с нами</div>
-            <h2>Контакты</h2>
+            <div class="eyebrow">Что о нас говорят</div>
+            <h2>Отзывы клиентов</h2>
         </div>
-        <div class="contacts-grid">
-            <div class="contact-card">
-                <div class="contact-icon">📞</div>
-                <h4>Телефоны / WhatsApp</h4>
-                <div class="contact-value">
-                    <a href="tel:+79939527720">8-993-952-77-20</a><br>
-                    <a href="tel:+79939537770">8-993-953-77-70</a>
+        <div class="reviews-grid">
+            <div class="review-card">
+                <div class="stars">★★★★★</div>
+                <p>Установили кондиционер в коттедже. Всё сделали аккуратно и быстро. Отдельно порадовало, что замер был бесплатным, а цена не изменилась после монтажа. Рекомендую!</p>
+                <div class="author">
+                    <div class="name">Дмитрий</div>
+                    <div class="info">Коттедж, Новосибирск</div>
                 </div>
             </div>
-            <div class="contact-card">
-                <div class="contact-icon">✉️</div>
-                <h4>Email</h4>
-                <div class="contact-value">
-                    <a href="mailto:info@primeclimate-nsk.ru">info@primeclimate-nsk.ru</a><br>
-                    <a href="mailto:zakaz@primeclimate-nsk.ru">zakaz@primeclimate-nsk.ru</a>
+            <div class="review-card">
+                <div class="stars">★★★★★</div>
+                <p>Меняли проводку в квартире. Работали штроборезом с пылесосом — минимум пыли, очень аккуратно. Щиток собрали красиво, всё подписали. Гарантию дали. Спасибо!</p>
+                <div class="author">
+                    <div class="name">Алина</div>
+                    <div class="info">Квартира, Академгородок</div>
                 </div>
             </div>
-            <div class="contact-card">
-                <div class="contact-icon">🌐</div>
-                <h4>Сайт и Авито</h4>
-                <div class="contact-value">
-                    primeclimate-nsk.ru<br>
-                    <a href="https://www.avito.ru/user/b74785e5b6c9f492ae4b94668f68655b/profile?src=sharing" target="_blank">Профиль на Авито</a>
-                </div>
-            </div>
-            <div class="contact-card">
-                <div class="contact-icon">📍</div>
-                <h4>Режим работы</h4>
-                <div class="contact-value">
-                    Ежедневно 8:00 – 20:00<br>
-                    <span style="font-size:13px; color:#4a6a8a;">Новосибирск и область</span>
+            <div class="review-card">
+                <div class="stars">★★★★★</div>
+                <p>Для магазина сделали светодиодную вывеску и заменили проводку. Работы под ключ, без нервов. Все документы для бухгалтерии предоставили. Будем сотрудничать.</p>
+                <div class="author">
+                    <div class="name">Сергей</div>
+                    <div class="info">Магазин, Ленинский район</div>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- ============ РЕКВИЗИТЫ ============ -->
-<section class="requisites">
+<section id="faq">
     <div class="container">
-        <h3>Реквизиты компании</h3>
-        <div class="requisites-grid">
-            <div>
-                <p><strong>Полное наименование:</strong></p>
-                <p>ООО «ПРАЙМ КЛИМАТ ИНЖИНИРИНГ»</p>
-                <p><strong>ИНН:</strong> 5406856000</p>
-                <p><strong>КПП:</strong> 540601001</p>
-                <p><strong>ОГРН:</strong> 1265400021875</p>
+        <div class="section-header">
+            <div class="eyebrow">Частые вопросы</div>
+            <h2>Что вас интересует</h2>
+        </div>
+        <div class="faq-list">
+            <div class="faq-item" onclick="this.classList.toggle('open')">
+                <div class="q">Сколько стоит установка кондиционера?</div>
+                <div class="a">Стоимость монтажа сплит-системы — от 14 000 ₽ (трасса до 3 метров включена). Итоговая цена зависит от модели, сложности монтажа и высоты этажа. Точную стоимость назовём после бесплатного замера.</div>
             </div>
-            <div>
-                <p><strong>Юридический адрес:</strong></p>
-                <p>630099, г. Новосибирск, ул. Орджоникидзе, зд. 40, помещ. 2423</p>
-                <p><strong>Система налогообложения:</strong> УСН, 6%</p>
-                <p>НДС не облагается</p>
+            <div class="faq-item" onclick="this.classList.toggle('open')">
+                <div class="q">Делаете ли вы работы по всему Новосибирску?</div>
+                <div class="a">Да, работаем по всему Новосибирску и области — Ленинский, Кировский, Советский, Дзержинский, Заельцовский, Центральный район, Академгородок, а также коттеджные посёлки и СНТ.</div>
             </div>
-            <div>
-                <p><strong>Банковские реквизиты:</strong></p>
-                <p>Р/с: 40702810410002326080</p>
-                <p>Банк: АО «ТБанк»</p>
-                <p>БИК: 044525974</p>
-                <p>К/с: 30101810145250000974</p>
+            <div class="faq-item" onclick="this.classList.toggle('open')">
+                <div class="q">Работаете ли с юридическими лицами?</div>
+                <div class="a">Да. Мы официальное ООО, работаем с организациями по договору. Принимаем безнал, выдаём все закрывающие документы (счёт, акт, договор). Возможна рассрочка от Т-Банка.</div>
             </div>
-            <div>
-                <p><strong>Руководство:</strong></p>
-                <p>Генеральный директор: Гурименко Д.А.</p>
-                <p>Исполнительный директор: Мочалов Е.С.</p>
-                <p><strong>Email:</strong> <a href="mailto:director@primeclimate-nsk.ru">director@primeclimate-nsk.ru</a></p>
+            <div class="faq-item" onclick="this.classList.toggle('open')">
+                <div class="q">Какая гарантия на работы?</div>
+                <div class="a">Гарантия на все виды работ — 2 года с момента подписания акта. При гарантийном случае выезд специалиста бесплатный, устранение — за наш счёт, если это наша вина.</div>
+            </div>
+            <div class="faq-item" onclick="this.classList.toggle('open')">
+                <div class="q">Сколько ждать мастера после заявки?</div>
+                <div class="a">Обычно приезжаем в день обращения или на следующий день. Замер и консультация — бесплатно. Работаем ежедневно с 8:00 до 20:00.</div>
+            </div>
+            <div class="faq-item" onclick="this.classList.toggle('open')">
+                <div class="q">Есть ли рассрочка на услуги?</div>
+                <div class="a">Да, оформляем рассрочку от Т-Банка — без переплат и первого взноса, на срок до 12 месяцев. Оформление занимает 5 минут по паспорту.</div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- ============ ФУТЕР ============ -->
-<footer class="main-footer">
+<section class="alt-bg">
     <div class="container">
-        <div class="footer-brand">ООО «ПРАЙМ КЛИМАТ ИНЖИНИРИНГ»</div>
-        <div class="footer-slogan">«Инженерные решения для жизни»</div>
-        <p>© 2026 Все права защищены • ИНН 5406856000 • ОГРН 1265400021875</p>
-        <p style="margin-top:10px;">
-            <a href="tel:+79939527720">8-993-952-77-20</a> • 
-            <a href="mailto:info@primeclimate-nsk.ru">info@primeclimate-nsk.ru</a> • 
-            <a href="https://www.avito.ru/user/b74785e5b6c9f492ae4b94668f68655b/profile?src=sharing" target="_blank">Профиль на Авито</a>
-        </p>
+        <div class="partners-block">
+            <h3>Приглашаем к сотрудничеству</h3>
+            <p>Дизайнеров, прорабов, архитекторов, застройщиков, УК и ТСЖ. Работаем на выгодных условиях, предоставляем все документы, соблюдаем сроки.</p>
+            <div class="benefits">
+                <div class="b-item">
+                    <strong>Опытные мастера</strong>
+                    <span>Команда специалистов со стажем более 5 лет. Качественно и в срок.</span>
+                </div>
+                <div class="b-item">
+                    <strong>Полный цикл работ</strong>
+                    <span>Кондиционеры, электрика, отделка, вывески — один подрядчик.</span>
+                </div>
+                <div class="b-item">
+                    <strong>Прозрачные условия</strong>
+                    <span>Договор, фиксированные цены, закрывающие документы.</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="contact">
+    <div class="container">
+        <div class="contact-form-block">
+            <h3>Получить бесплатную консультацию</h3>
+            <p>Оставьте заявку — перезвоним в течение 15 минут</p>
+
+            <form id="contactForm" action="https://formspree.io/f/xeaooooa" method="POST">
+                <input type="text" name="name" placeholder="Ваше имя" required>
+                <input type="tel" name="phone" placeholder="Телефон" required>
+                <select name="service" required>
+                    <option value="">Какая услуга интересует?</option>
+                    <option>Кондиционеры</option>
+                    <option>Электромонтаж</option>
+                    <option>Внутренняя отделка</option>
+                    <option>Светодиодные вывески</option>
+                    <option>Другое</option>
+                </select>
+                <textarea name="comment" placeholder="Комментарий (необязательно)"></textarea>
+                <button type="submit">Получить консультацию</button>
+                <p class="privacy">Нажимая кнопку, вы соглашаетесь с политикой конфиденциальности</p>
+            </form>
+
+            <div class="form-success" id="formSuccess">
+                ✓ Спасибо! Ваша заявка принята. Мы свяжемся с вами в течение 15 минут.
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <div class="footer-brand">ООО «ПРАЙМ КЛИМАТ ИНЖИНИРИНГ»</div>
+                <div class="footer-slogan">«Инженерные решения для жизни»</div>
+                <p style="font-size:13px; line-height:1.6; color:#8a9aae;">Монтаж кондиционеров, электромонтаж, внутренняя отделка, светодиодные вывески в Новосибирске и области.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Услуги</h4>
+                <ul>
+                    <li><a href="#services">Кондиционеры</a></li>
+                    <li><a href="#services">Электромонтаж</a></li>
+                    <li><a href="#services">Отделка</a></li>
+                    <li><a href="#services">Светодиодные вывески</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Компания</h4>
+                <ul>
+                    <li><a href="#why">Преимущества</a></li>
+                    <li><a href="#team">Команда</a></li>
+                    <li><a href="#how">Как работаем</a></li>
+                    <li><a href="#reviews">Отзывы</a></li>
+                    <li><a href="#faq">Вопросы</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Контакты</h4>
+                <ul>
+                    <li>📞 <a href="tel:+79939527720">8-993-952-77-20</a></li>
+                    <li>📞 <a href="tel:+79939537770">8-993-953-77-70</a></li>
+                    <li>✉️ <a href="mailto:info@primeclimate-nsk.ru">info@primeclimate-nsk.ru</a></li>
+                    <li>🌐 <a href="https://primeclimate-nsk.ru">primeclimate-nsk.ru</a></li>
+                    <li>📍 г. Новосибирск, ул. Орджоникидзе, 40</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            © 2026 ООО «ПРАЙМ КЛИМАТ ИНЖИНИРИНГ» • ИНН 5406856000 • КПП 540601001 • ОГРН 1265400021875<br>
+            Все права защищены. Информация на сайте не является публичной офертой.
+        </div>
     </div>
 </footer>
 
-<!-- ============ ПЛАВАЮЩАЯ КНОПКА ЗВОНКА ============ -->
 <a href="tel:+79939527720" class="floating-call" title="Позвонить">📞</a>
+<a href="https://wa.me/79939527720" class="floating-wa" title="WhatsApp" target="_blank">💬</a>
+
+<script>
+    function calcPrice(e) {
+        e.preventDefault();
+        const service = document.getElementById('calcService').value;
+        const amount = parseFloat(document.getElementById('calcAmount').value) || 0;
+        let price = 0;
+        switch(service) {
+            case 'montazh': price = 14000; break;
+            case 'obsluzhivanie': price = 2500; break;
+            case 'elektrika': price = amount * 1000; break;
+            case 'otdelka': price = amount * 1000; break;
+            case 'vyveska': price = 5000; break;
+        }
+        if (!price) { alert('Выберите услугу'); return false; }
+        document.getElementById('calcPrice').textContent = 'от ' + price.toLocaleString('ru-RU') + ' ₽';
+        document.getElementById('calcResult').classList.add('show');
+        return false;
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+        a.addEventListener('click', function(e) {
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                e.preventDefault();
+                window.scrollTo({ top: target.offsetTop - 80, behavior: 'smooth' });
+            }
+        });
+    });
+
+    const contactForm = document.getElementById('contactForm');
+    if (contactForm) {
+        contactForm.addEventListener('submit', async function(e) {
+            e.preventDefault();
+            const formData = new FormData(this);
+            try {
+                const response = await fetch(this.action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: { 'Accept': 'application/json' }
+                });
+                if (response.ok) {
+                    document.getElementById('formSuccess').classList.add('show');
+                    this.reset();
+                    setTimeout(() => {
+                        document.getElementById('formSuccess').classList.remove('show');
+                    }, 8000);
+                } else {
+                    alert('Ошибка отправки. Позвоните нам: 8-993-952-77-20');
+                }
+            } catch (err) {
+                alert('Ошибка отправки. Позвоните нам: 8-993-952-77-20');
+            }
+        });
+    }
+
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+            navigator.serviceWorker.register('sw.js').catch(() => {});
+        });
+    }
+</script>
 
 </body>
 </html>
