@@ -145,6 +145,21 @@ section.alt-bg{background:linear-gradient(180deg,#f4f8fe,#eef4fc)}
 .object-card h4{font-family:Arial,sans-serif;font-size:17px;margin-bottom:8px}
 .object-card p{font-size:13.5px;color:#4a6a8a;line-height:1.5}
 
+/* БЛОК РАБОТ */
+.works-preview{display:grid;grid-template-columns:repeat(2,1fr);gap:25px;max-width:900px;margin:0 auto}
+.works-preview a{text-decoration:none;color:#0b2a4a;display:block}
+.works-preview .w-card{background:#fff;border-radius:16px;overflow:hidden;border:1px solid #e8eff9;transition:transform .3s,box-shadow .3s}
+.works-preview .w-card:hover{transform:translateY(-8px);box-shadow:0 25px 60px rgba(11,42,74,.15)}
+.works-preview .w-img{aspect-ratio:16/10;overflow:hidden;background:#0b2a4a;position:relative}
+.works-preview .w-img img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.works-preview .w-card:hover .w-img img{transform:scale(1.05)}
+.works-preview .w-info{padding:22px 24px}
+.works-preview .w-info .w-title{font-family:Arial,sans-serif;font-size:18px;font-weight:700;margin-bottom:8px}
+.works-preview .w-info .w-meta{font-size:13.5px;color:#4a6a8a;line-height:1.5}
+.works-all-btn{display:flex;justify-content:center;margin-top:35px}
+.works-all-btn a{display:inline-flex;align-items:center;gap:8px;font-family:Arial,sans-serif;font-size:14px;font-weight:700;letter-spacing:1px;text-transform:uppercase;background:#0b2a4a;color:#fff;padding:15px 30px;border-radius:6px;text-decoration:none;transition:all .3s}
+.works-all-btn a:hover{background:#b8860b;color:#fff;transform:translateY(-2px)}
+
 .steps-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:25px}
 .step-card{background:#fff;border-radius:16px;padding:35px 28px;border-top:4px solid #b8860b;box-shadow:0 6px 20px rgba(11,42,74,.06);transition:transform .4s,box-shadow .4s;text-align:left}
 .step-card:hover{transform:translateY(-8px);box-shadow:0 25px 50px rgba(11,42,74,.15)}
@@ -282,6 +297,7 @@ footer{background:linear-gradient(180deg,#08192b,#0a1f35);color:#a8b8c8;padding:
 .why-grid,.steps-grid,.reviews-grid,.services-grid,.team-grid{grid-template-columns:1fr}
 .objects-grid{grid-template-columns:repeat(2,1fr)}
 .map-links{grid-template-columns:repeat(2,1fr)}
+.works-preview{grid-template-columns:1fr}
 .fr-card{grid-template-columns:1fr}
 .fr-photo{min-height:320px}
 .fr-content{padding:35px 28px}
@@ -357,11 +373,11 @@ section{padding:55px 0}
 
 <nav class="main-nav" id="mainNav"><ul>
 <li><a href="presentation.html">О компании</a></li>
+<li><a href="portfolio.html">Наши работы</a></li>
 <li><a href="#services">Услуги</a></li>
 <li><a href="#team">Команда</a></li>
-<li><a href="#how">Как работаем</a></li>
+<li><a href="#works">Работы</a></li>
 <li><a href="#review">Отзыв</a></li>
-<li><a href="#contacts-maps">Контакты</a></li>
 <li><a href="#faq">Вопросы</a></li>
 <li><a href="#contact">Заявка</a></li>
 </ul></nav>
@@ -490,7 +506,20 @@ section{padding:55px 0}
 </div>
 </div></section>
 
-<section id="how"><div class="container">
+<!-- БЛОК «НАШИ РАБОТЫ» -->
+<section id="works"><div class="container">
+<div class="section-header">
+<div class="eyebrow">Наши работы</div>
+<h2>Последние объекты</h2>
+<p class="desc">Реальные проекты с фотогалереей и видеоотчётами</p>
+</div>
+<div class="works-preview" id="worksPreview"></div>
+<div class="works-all-btn">
+<a href="portfolio.html">Все работы →</a>
+</div>
+</div></section>
+
+<section id="how" class="alt-bg"><div class="container">
 <div class="section-header"><div class="eyebrow">Простой процесс</div><h2>Как мы работаем</h2><p class="desc">От заявки до готового результата — 6 простых шагов</p></div>
 <div class="steps-grid">
 <div class="step-card"><div class="num">01</div><h4>Заявка и консультация</h4><p>Вы оставляете заявку или звоните. Уточняем задачу, отвечаем на вопросы бесплатно.</p><div class="result">→ Понимание задачи и сроков</div></div>
@@ -511,9 +540,9 @@ section{padding:55px 0}
 </div>
 <div class="fr-card">
 <div class="fr-photo">
-<img src="review-elena.jpg" alt="Знаемская Елена Николаевна" loading="lazy">
+<img src="review-elena.jpg" alt="Отзыв клиента" loading="lazy">
 <div class="fr-photo-caption">
-<div class="fr-name">Знаемская Елена Николаевна</div>
+<div class="fr-name">Елена Николаевна</div>
 <div class="fr-city">г. Новосибирск</div>
 </div>
 </div>
@@ -661,6 +690,7 @@ section{padding:55px 0}
 </ul></div>
 <div class="footer-col"><h4>Компания</h4><ul>
 <li><a href="presentation.html">О компании</a></li>
+<li><a href="portfolio.html">Наши работы</a></li>
 <li><a href="#team">Команда</a></li>
 <li><a href="#how">Как работаем</a></li>
 <li><a href="#review">Отзыв клиента</a></li>
@@ -852,6 +882,28 @@ function updAC(){
 window.addEventListener('scroll',updAC,{passive:true});
 window.addEventListener('resize',updAC);
 updAC();
+
+/* АВТО-ПОДГРУЗКА ПОСЛЕДНИХ РАБОТ ИЗ works-data.js */
+(function(){
+    var box = document.getElementById('worksPreview');
+    if(!box || !window.WORKS) return;
+    window.WORKS.slice(0, 2).forEach(function(w){
+        var a = document.createElement('a');
+        a.href = 'portfolio/object.html?id=' + w.id;
+        a.innerHTML =
+            '<div class="w-card">' +
+                '<div class="w-img">' +
+                    '<img src="gallery/object-' + w.id + '/' + (w.cover || '01') + '.jpg" alt="' + w.title + '" loading="lazy">' +
+                '</div>' +
+                '<div class="w-info">' +
+                    '<div class="w-title">' + w.title + '</div>' +
+                    '<div class="w-meta">' + w.type + ' · ' + w.photos + ' фото' + (w.videos && w.videos.length ? ' · ' + w.videos.length + ' видео' : '') + '</div>' +
+                '</div>' +
+            '</div>';
+        box.appendChild(a);
+    });
+})();
 </script>
+<script src="works-data.js"></script>
 </body>
 </html>
