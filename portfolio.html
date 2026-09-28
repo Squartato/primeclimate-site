@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Наши работы — Prime Climate Engineering</title>
+<meta name="description" content="Портфолио выполненных объектов: кондиционеры, электрика, отделка, натяжные потолки в Новосибирске.">
+<link rel="icon" type="image/png" href="logo.png">
+<meta name="theme-color" content="#0b2a4a">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:Georgia,serif;background:#f4f8fe;color:#0b2a4a;line-height:1.6;overflow-x:hidden}
+a{color:#0b2a4a;text-decoration:none;transition:color .2s}
+a:hover{color:#b8860b}
+img{max-width:100%;display:block}
+.container{max-width:1200px;margin:0 auto;padding:0 20px}
+
+.top-bar{background:linear-gradient(90deg,#0b2a4a,#1a3c5e);color:#fff;padding:10px 0;font-family:Arial,sans-serif;font-size:13px}
+.top-bar .container{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px}
+.top-bar a{color:#fff}
+.top-bar a:hover{color:#ffd700}
+.top-bar .contacts{display:flex;gap:20px;flex-wrap:wrap;align-items:center}
+.top-bar .badge{background:rgba(255,215,0,.15);border:1px solid rgba(255,215,0,.3);padding:2px 8px;border-radius:20px;font-size:11px;color:#ffd700}
+
+header.main-header{background:#fff;border-bottom:3px solid #0b2a4a;padding:12px 0;position:sticky;top:0;z-index:100;box-shadow:0 2px 20px rgba(11,42,74,.1)}
+.main-header .container{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:15px}
+.logo-block{display:flex;align-items:center;gap:15px}
+.logo-block img{height:50px}
+.brand-name{font-family:Arial,sans-serif;font-size:18px;font-weight:700;color:#0b2a4a;letter-spacing:1px;line-height:1.1}
+.brand-slogan{font-size:11px;color:#b8860b;font-style:italic;letter-spacing:.5px;margin-top:2px}
+.header-right{display:flex;align-items:center;gap:25px}
+.header-contacts{text-align:right;font-family:Arial,sans-serif}
+.phone-main{font-size:18px;font-weight:700;color:#0b2a4a}
+.phone-second{font-size:13px;color:#2c4a6a;margin-top:2px}
+
+nav.main-nav{background:linear-gradient(90deg,#0b2a4a,#1a3c5e)}
+nav.main-nav ul{display:flex;list-style:none;justify-content:center;flex-wrap:wrap}
+nav.main-nav li a{display:block;color:#fff;padding:14px 20px;font-family:Arial,sans-serif;font-size:12px;text-transform:uppercase;letter-spacing:1.5px;font-weight:600;transition:color .2s}
+nav.main-nav li a:hover{color:#ffd700}
+nav.main-nav li a.active{color:#ffd700}
+
+.hero-page{background:linear-gradient(135deg,#0b2a4a 0%,#1a3c5e 60%,#2c4a6a 100%);color:#fff;padding:60px 0;text-align:center;position:relative;overflow:hidden}
+.hero-page::before{content:'PORTFOLIO';position:absolute;right:-30px;bottom:-40px;font-family:Arial,sans-serif;font-size:200px;font-weight:900;color:#fff;opacity:.04;line-height:1;letter-spacing:-8px;pointer-events:none}
+.hero-page h1{font-family:Arial,sans-serif;font-size:38px;font-weight:800;text-transform:uppercase;letter-spacing:2px;margin-bottom:14px;position:relative;z-index:1}
+.hero-page p{font-size:16px;color:#e8eff9;max-width:700px;margin:0 auto;position:relative;z-index:1}
+
+.section{padding:70px 0}
+
+.filters{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-bottom:40px}
+.filters button{background:#fff;border:2px solid #e8eff9;color:#0b2a4a;font-family:Arial,sans-serif;font-size:13px;font-weight:600;padding:10px 22px;border-radius:30px;cursor:pointer;transition:all .3s;letter-spacing:.3px}
+.filters button:hover{border-color:#b8860b;color:#b8860b}
+.filters button.active{background:#0b2a4a;border-color:#0b2a4a;color:#fff}
+
+.portfolio-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:30px}
+
+.portfolio-card{background:#fff;border-radius:18px;overflow:hidden;box-shadow:0 10px 40px rgba(11,42,74,.08);transition:transform .4s,box-shadow .4s;border:1px solid #e8eff9;display:flex;flex-direction:column}
+.portfolio-card:hover{transform:translateY(-8px);box-shadow:0 25px 60px rgba(11,42,74,.15)}
+.portfolio-card .pc-image{position:relative;height:340px;overflow:hidden;background:#0b2a4a}
+.portfolio-card .pc-image img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.portfolio-card:hover .pc-image img{transform:scale(1.05)}
+.portfolio-card .pc-badge{position:absolute;top:16px;left:16px;background:rgba(11,42,74,.9);color:#fff;font-family:Arial,sans-serif;font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:6px 12px;border-radius:4px;z-index:2}
+.portfolio-card .pc-count{position:absolute;bottom:16px;right:16px;background:rgba(11,42,74,.9);color:#ffd700;font-family:Arial,sans-serif;font-size:11px;font-weight:700;letter-spacing:1px;padding:6px 12px;border-radius:4px;z-index:2}
+.portfolio-card .pc-body{padding:28px 30px 32px;display:flex;flex-direction:column;flex:1}
+.portfolio-card .pc-body h3{font-family:Arial,sans-serif;font-size:22px;font-weight:700;color:#0b2a4a;margin-bottom:12px}
+.portfolio-card .pc-body .pc-desc{font-size:14.5px;color:#4a6a8a;line-height:1.6;margin-bottom:18px}
+.portfolio-card .pc-tags{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px}
+.portfolio-card .pc-tags span{background:#e8eff9;color:#0b2a4a;font-family:Arial,sans-serif;font-size:11.5px;font-weight:600;padding:5px 12px;border-radius:20px}
+.portfolio-card .pc-btn{display:inline-flex;align-items:center;gap:8px;font-family:Arial,sans-serif;font-size:13px;font-weight:700;letter-spacing:1px;text-transform:uppercase;background:#0b2a4a;color:#fff;padding:13px 24px;border-radius:6px;transition:all .3s;margin-top:auto;align-self:flex-start}
+.portfolio-card .pc-btn:hover{background:#b8860b;color:#fff;transform:translateY(-2px)}
+
+.empty-msg{text-align:center;padding:60px 20px;font-size:16px;color:#4a6a8a}
+
+footer{background:linear-gradient(180deg,#08192b,#0a1f35);color:#a8b8c8;padding:50px 0 25px;font-family:Arial,sans-serif;font-size:13.5px;margin-top:60px}
+.footer-bottom{border-top:1px solid #1a2c3e;padding-top:22px;text-align:center;font-size:12px;color:#6a7a8a;line-height:1.8}
+.footer-bottom a{color:#8a9aae;text-decoration:underline}
+
+@media(max-width:900px){.portfolio-grid{grid-template-columns:1fr}.hero-page h1{font-size:28px}}
+@media(max-width:600px){.main-header .container{flex-direction:column;align-items:flex-start}.portfolio-card .pc-image{height:240px}.portfolio-card .pc-body{padding:22px 22px 26px}}
+</style>
+</head>
+<body>
+
+<div class="top-bar"><div class="container">
+<div class="contacts">
+<span>📞 <a href="tel:+79939527720">8-993-952-77-20</a></span>
+<span>📞 <a href="tel:+79939537720">8-993-953-77-20</a></span>
+<span>✉️ <a href="mailto:info@primeclimate-nsk.ru">info@primeclimate-nsk.ru</a></span>
+</div>
+<div class="contacts">
+<span class="badge">🕐 Ежедневно 8:00 – 20:00</span>
+<span>📍 Новосибирск и область</span>
+</div>
+</div></div>
+
+<header class="main-header"><div class="container">
+<div class="logo-block">
+<img src="logo.png" alt="PCE">
+<div>
+<div class="brand-name">PRIME CLIMATE<br>ENGINEERING</div>
+<div class="brand-slogan">Инженерные решения для жизни</div>
+</div>
+</div>
+<div class="header-right">
+<div class="header-contacts">
+<a href="tel:+79939527720" class="phone-main">8-993-952-77-20</a>
+<div class="phone-second">8-993-953-77-20</div>
+</div>
+</div>
+</div></header>
+
+<nav class="main-nav"><ul>
+<li><a href="index.html">Главная</a></li>
+<li><a href="presentation.html">О компании</a></li>
+<li><a href="portfolio.html" class="active">Наши работы</a></li>
+<li><a href="index.html#services">Услуги</a></li>
+<li><a href="index.html#faq">Вопросы</a></li>
+<li><a href="index.html#contact">Заявка</a></li>
+</ul></nav>
+
+<section class="hero-page">
+<h1>Наши работы</h1>
+<p>Реальные объекты, выполненные под ключ. С договором, гарантией и закрывающими документами.</p>
+</section>
+
+<section class="section">
+<div class="container">
+
+<div class="filters" id="filters">
+    <button data-filter="all" class="active">Все работы</button>
+    <button data-filter="apartment">Квартиры</button>
+    <button data-filter="house">Дома</button>
+    <button data-filter="office">Офисы</button>
+    <button data-filter="shop">Магазины</button>
+    <button data-filter="cafe">Кафе и салоны</button>
+</div>
+
+<div class="portfolio-grid" id="grid"></div>
+<div class="empty-msg" id="empty" style="display:none">Пока в этой категории нет объектов</div>
+
+</div>
+</section>
+
+<footer><div class="container">
+<div class="footer-bottom">
+© 2026 ООО «ПРАЙМ КЛИМАТ ИНЖИНИРИНГ» • ИНН 5406856000 • КПП 540601001 • ОГРН 1265400021875<br>
+Все права защищены. Информация на сайте не является публичной офертой.<br>
+<a href="privacy.html">Политика конфиденциальности</a> · <a href="consent.html">Согласие на обработку ПД</a>
+</div>
+</div></footer>
+
+<script src="works-data.js"></script>
+<script>
+(function(){
+    var grid = document.getElementById('grid');
+    var empty = document.getElementById('empty');
+    var filters = document.getElementById('filters');
+
+    function photoUrl(id, num){
+        return 'gallery/object-' + id + '/' + String(num).padStart(2, '0') + '.jpg';
+    }
+
+    function render(filter){
+        filter = filter || 'all';
+        grid.innerHTML = '';
+        var shown = 0;
+
+        window.WORKS.forEach(function(w){
+            if(filter !== 'all' && w.tag !== filter) return;
+            shown++;
+
+            var card = document.createElement('div');
+            card.className = 'portfolio-card';
+            card.innerHTML =
+                '<a href="portfolio/object.html?id=' + w.id + '">' +
+                    '<div class="pc-image">' +
+                        '<div class="pc-badge">' + w.type + '</div>' +
+                        '<div class="pc-count">📷 ' + w.photos + ' фото' + (w.videos && w.videos.length ? ' · 🎬 ' + w.videos.length : '') + '</div>' +
+                        '<img src="' + photoUrl(w.id, w.cover || '01') + '" alt="' + w.title + '" loading="lazy">' +
+                    '</div>' +
+                '</a>' +
+                '<div class="pc-body">' +
+                    '<h3>' + w.title + '</h3>' +
+                    '<p class="pc-desc">' + w.desc + '</p>' +
+                    '<div class="pc-tags">' +
+                        (w.tags || []).map(function(t){ return '<span>' + t + '</span>'; }).join('') +
+                    '</div>' +
+                    '<a href="portfolio/object.html?id=' + w.id + '" class="pc-btn">Смотреть объект →</a>' +
+                '</div>';
+            grid.appendChild(card);
+        });
+
+        empty.style.display = shown === 0 ? 'block' : 'none';
+    }
+
+    filters.addEventListener('click', function(e){
+        var btn = e.target.closest('button');
+        if(!btn) return;
+        filters.querySelectorAll('button').forEach(function(b){ b.classList.remove('active'); });
+        btn.classList.add('active');
+        render(btn.getAttribute('data-filter'));
+    });
+
+    render('all');
+})();
+</script>
+</body>
+</html>
