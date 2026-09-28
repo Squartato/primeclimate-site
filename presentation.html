@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>О компании — Prime Climate Engineering</title>
-<meta name="description" content="Prime Climate Engineering — инженерная компания в Новосибирске. Кондиционеры, электрика, отделка, светодиодные вывески.">
+<meta name="description" content="Prime Climate Engineering — инженерная компания в Новосибирске. Кондиционеры, электрика, отделка, натяжные потолки, светодиодные вывески.">
 <link rel="icon" type="image/png" href="logo.png">
 <meta name="theme-color" content="#0b2a4a">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,700&family=Inter:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
@@ -22,11 +22,9 @@
     a { color: inherit; text-decoration: none; }
     img { max-width: 100%; display: block; }
 
-    /* ============ ОБЩИЙ КОНТЕЙНЕР ============ */
     .wrap { max-width: 1440px; margin: 0 auto; padding: 0 60px; }
     @media (max-width: 900px) { .wrap { padding: 0 24px; } }
 
-    /* ============ ТОНКАЯ ШАПКА ============ */
     .top {
         position: fixed; top: 0; left: 0; right: 0;
         z-index: 1000;
@@ -52,7 +50,7 @@
         letter-spacing: 2px;
         line-height: 1.1;
     }
-    .top-nav { display: flex; gap: 34px; align-items: center; }
+    .top-nav { display: flex; gap: 30px; align-items: center; }
     .top-nav a {
         font-size: 13px; font-weight: 500;
         color: #0b2a4a; letter-spacing: 0.5px;
@@ -69,7 +67,6 @@
         .top-phone { font-size: 14px; }
     }
 
-    /* ============ ТИТУЛЬНАЯ ============ */
     .hero {
         padding: 180px 0 120px;
         position: relative;
@@ -127,7 +124,6 @@
         font-style: italic;
     }
 
-    /* ============ БОЛЬШИЕ ЦИФРЫ ============ */
     .numbers {
         padding: 100px 0;
         background: #0b2a4a;
@@ -162,7 +158,6 @@
         text-transform: uppercase;
     }
 
-    /* ============ РАЗДЕЛИТЕЛЬ ============ */
     .divider {
         display: flex; align-items: center; gap: 30px;
         padding: 90px 0 70px;
@@ -186,7 +181,6 @@
         text-transform: uppercase;
     }
 
-    /* ============ О КОМПАНИИ ============ */
     .about-editorial {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -226,7 +220,6 @@
     }
     .about-editorial .body strong { color: #0b2a4a; font-weight: 600; }
 
-    /* ============ КОМАНДА ============ */
     .team-editorial {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -234,9 +227,7 @@
         padding-bottom: 120px;
     }
     @media (max-width: 900px) { .team-editorial { grid-template-columns: 1fr; gap: 50px; } }
-    .person {
-        position: relative;
-    }
+    .person { position: relative; }
     .person-photo {
         aspect-ratio: 4/5;
         overflow: hidden;
@@ -288,7 +279,6 @@
         color: #4a4a4a;
     }
 
-    /* ============ УСЛУГИ ============ */
     .services-list { padding-bottom: 120px; }
     .service-row {
         display: grid;
@@ -344,7 +334,6 @@
         .service-row .s-price { text-align: left; }
     }
 
-    /* ============ ГАРАНТИЯ ============ */
     .warranty {
         background: #0b2a4a;
         color: #f5f1ea;
@@ -399,10 +388,7 @@
         letter-spacing: 0.5px;
     }
 
-    /* ============ КОНТАКТЫ ============ */
-    .contacts-big {
-        padding: 140px 0 100px;
-    }
+    .contacts-big { padding: 140px 0 100px; }
     .contacts-big .eyebrow {
         font-family: 'Cormorant Garamond', serif;
         font-size: 18px;
@@ -460,7 +446,6 @@
     }
     .contact-row .val.gold { color: #b8860b; font-style: italic; }
 
-    /* ============ ПОДПИСЬ ============ */
     .signature {
         padding: 60px 0 100px;
         text-align: center;
@@ -487,7 +472,6 @@
         text-transform: uppercase;
     }
 
-    /* ============ ФУТЕР ============ */
     .foot {
         background: #0b2a4a;
         color: rgba(255, 255, 255, 0.5);
@@ -509,7 +493,6 @@
     .foot a { color: rgba(255, 255, 255, 0.5); }
     .foot a:hover { color: #b8860b; }
 
-    /* ============ ПЛАВАЮЩАЯ КНОПКА ============ */
     .float-call {
         position: fixed; bottom: 30px; right: 30px;
         width: 60px; height: 60px;
@@ -535,6 +518,7 @@
         </a>
         <nav class="top-nav">
             <a href="index.html">Главная</a>
+            <a href="portfolio.html">Портфолио</a>
             <a href="#about">О компании</a>
             <a href="#team">Команда</a>
             <a href="#services">Услуги</a>
@@ -560,7 +544,7 @@
             </div>
             <div>
                 <div class="lbl">Что делаем</div>
-                <div class="val">Кондиционеры, электромонтаж, внутренняя отделка, светодиодные вывески. Один подрядчик на всё.</div>
+                <div class="val">Кондиционеры, электромонтаж, отделка, натяжные потолки и светодиодные вывески. Один подрядчик на всё.</div>
             </div>
         </div>
     </div>
@@ -579,8 +563,8 @@
                 <div class="lbl">Лет опыта</div>
             </div>
             <div class="num-item">
-                <div class="val">4</div>
-                <div class="lbl">Направления</div>
+                <div class="val">5</div>
+                <div class="lbl">Направлений</div>
             </div>
             <div class="num-item">
                 <div class="val">24/7</div>
@@ -678,6 +662,14 @@
             <div class="service-row">
                 <div class="s-num">IV</div>
                 <div>
+                    <div class="s-title">Натяжные потолки</div>
+                    <div class="s-desc">Матовые, глянцевые и сатиновые полотна, теневые и парящие профили, LED-подсветка, световые линии. Обход труб, углы, закладные. Гарантия на полотно и монтаж.</div>
+                </div>
+                <div class="s-price">от 500 ₽/м²</div>
+            </div>
+            <div class="service-row">
+                <div class="s-num">V</div>
+                <div>
                     <div class="s-title">Светодиодные вывески</div>
                     <div class="s-desc">Изготовление и монтаж LED-вывесок, лайтбоксов, объёмных букв, архитектурной подсветки витрин.</div>
                 </div>
@@ -709,7 +701,7 @@
             </div>
             <div class="contact-row">
                 <span class="lbl">Телефон</span>
-                <span class="val gold">8-993-953-77-70</span>
+                <span class="val gold">8-993-953-77-20</span>
             </div>
             <div class="contact-row">
                 <span class="lbl">Почта</span>
@@ -744,7 +736,7 @@
     <div class="wrap foot-inner">
         <div class="foot-brand">PRIME CLIMATE ENGINEERING</div>
         <div>
-            <a href="index.html">Главная</a> · <a href="tel:+79939527720">8-993-952-77-20</a> · <a href="mailto:info@primeclimate-nsk.ru">info@primeclimate-nsk.ru</a>
+            <a href="index.html">Главная</a> · <a href="portfolio.html">Портфолио</a> · <a href="tel:+79939527720">8-993-952-77-20</a> · <a href="mailto:info@primeclimate-nsk.ru">info@primeclimate-nsk.ru</a>
         </div>
         <div>© 2026 Все права защищены</div>
     </div>
