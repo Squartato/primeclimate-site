@@ -21,8 +21,8 @@ window.WORKS = [
     type: "Квартира",
     tag: "apartment",
     desc: "Установка сплит-системы.",
-    tags: ["Электрика", "Кондиционеры"],
-    photos: 10,
+    tags: ["Кондиционеры"],
+    photos: 12,
     cover: "01",
     videos: [],
     info: {
